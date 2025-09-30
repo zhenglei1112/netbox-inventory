@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 21:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\netbox_inventory\filtersets.py:664
+msgid "Assigned Audit Flow (ID)"
+msgstr ""
+
+#: .\netbox_inventory\filtersets.py:676
+msgid "Audit Flow Page (ID)"
+msgstr ""
+
+#: .\netbox_inventory\filtersets.py:721
+msgid "Source (slug)"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_edit.py:375
+#: .\netbox_inventory\forms\bulk_edit.py:392
+msgid "Attributes"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_import.py:517
+#: .\netbox_inventory\forms\bulk_import.py:542 .\netbox_inventory\tables.py:573
+#: .\netbox_inventory\tables.py:659
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:20
+msgid "Object Type"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_import.py:567
+msgid "Source slug of this audit trail."
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:493
+msgid "Object type"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:501
+msgid "Audit flow"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:544
+msgid "After"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:549
+msgid "Before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:558 .\netbox_inventory\tables.py:670
+msgid "Time"
+msgstr ""
+
+#: .\netbox_inventory\forms\models.py:427
+msgid ""
+"Enter object filter in <a href=\"https://json.org/\">JSON</a> format, "
+"mapping attributes to values."
+msgstr ""
+
+#: .\netbox_inventory\forms\models.py:442
+#: .\netbox_inventory\forms\models.py:480
+msgid "Assignment"
+msgstr ""
+
+#: .\netbox_inventory\forms\reassign.py:53
+#: .\netbox_inventory\forms\reassign.py:233
+msgid "New Asset"
+msgstr ""
+
+#: .\netbox_inventory\forms\reassign.py:55
+#: .\netbox_inventory\forms\reassign.py:235
+msgid "Old Asset"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:67
+msgid "Filter must be defined as a dictionary mapping attributes to values."
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:82
+#, python-brace-format
+msgid "Invalid filter for {model}: {error}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:108
+msgid "audit flow page"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:109
+msgid "audit flow pages"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:123
+#, python-brace-format
+msgid "Object type not supported: No list view for {model}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:147
+msgid "enabled"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:163
+msgid "audit flow"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:164
+msgid "audit flows"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:188
+msgid "display weight"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:190
+msgid "Assignments with higher weights appear later in an audit flow."
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:208
+msgid "audit flow page assignment"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:209
+msgid "audit flow page assignments"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:220
+#, python-brace-format
+msgid "Cannot use page for this flow: {error}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:337
+msgid "audit trail source"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:338
+msgid "audit trail sources"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:388
+msgid "audit trail"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:389
+msgid "audit trails"
+msgstr ""
+
+#: .\netbox_inventory\models\mixins.py:14
+msgid "name"
+msgstr ""
+
+#: .\netbox_inventory\models\mixins.py:19
+msgid "description"
+msgstr ""
+
+#: .\netbox_inventory\models\mixins.py:24
+msgid "comments"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:17 .\netbox_inventory\navigation.py:32
+#: .\netbox_inventory\navigation.py:47 .\netbox_inventory\navigation.py:88
+#: .\netbox_inventory\navigation.py:103 .\netbox_inventory\navigation.py:118
+#: .\netbox_inventory\navigation.py:164 .\netbox_inventory\navigation.py:183
+#: .\netbox_inventory\navigation.py:215
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_add_object.html:8
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_add_object.html:16
+msgid "Add"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:23 .\netbox_inventory\navigation.py:38
+#: .\netbox_inventory\navigation.py:53 .\netbox_inventory\navigation.py:94
+#: .\netbox_inventory\navigation.py:109 .\netbox_inventory\navigation.py:124
+#: .\netbox_inventory\navigation.py:170 .\netbox_inventory\navigation.py:189
+#: .\netbox_inventory\navigation.py:202 .\netbox_inventory\navigation.py:221
+msgid "Import"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:62 .\netbox_inventory\tables.py:723
+#: .\netbox_inventory\tables.py:733 .\netbox_inventory\tables.py:743
+msgid "Assets"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:68
+msgid "Inventory Item Types"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:74
+msgid "Inventory Item Groups"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:133
+msgid "Suppliers"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:139
+msgid "Purchases"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:145
+msgid "Deliveries"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:159
+msgid "Flows"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:178
+msgid "Flow Pages"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:197
+msgid "Audit Trails"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:210
+msgid "Audit Trail Sources"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:236
+msgid "Inventory"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:662
+msgid "Object"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:680
+msgid "Auditor"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:686
+msgid "Auditor Name"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow.html:5
+msgid "Audit Flow"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow.html:10
+msgid "Enabled"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow_pages.html:10
+msgid "Assign page"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow_run.html:59
+msgid "Mark seen"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflowpage.html:5
+msgid "Audit Page Flow"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:9
+msgid "Audit Trail Source"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:12
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:12
+msgid "Name"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:16
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:16
+msgid "Description"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:27
+msgid "Object Filter"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:32
+msgid "No filter defined"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_run.html:8
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_run.html:16
+#: .\netbox_inventory\views\audittrail.py:107
+msgid "Audit"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:62
+msgid "Pages"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:426
+#, python-brace-format
+msgid "Marked {object} as seen"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:449
+#, python-brace-format
+msgid ""
+"{object} does not match audit location. Please edit the object accordingly."
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:473
+msgid "No matching object found"
+msgstr ""
+
+#: .\netbox_inventory\views\audittrail.py:75
+#, python-brace-format
+msgid "Marked {count} {type} as seen"
+msgstr ""
+
+#: .\netbox_inventory\views\audittrailsource.py:31
+msgid "Trails"
+msgstr ""
