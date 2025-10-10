@@ -2,6 +2,7 @@
 {% load static %}
 {% load form_helpers %}
 {% load helpers %}
+{% load i18n %}
 
 {% block tabs %}
   {% include 'netbox_inventory/inc/asset_edit_header.html' with active_tab='add' %}
@@ -10,7 +11,7 @@
 {% block form %}
     <div class="field-group my-5">
         <div class="row mb-2">
-          <h5 class="offset-sm-3">General</h5>
+          <h5 class="offset-sm-3">{% trans "General" %}</h5>
         </div>
         {% render_field form.name %}
         {% render_field form.asset_tag %}
@@ -21,7 +22,7 @@
 
     <div class="field-group my-5">
         <div class="row mb-2">
-          <h5 class="offset-sm-3">Hardware</h5>
+          <h5 class="offset-sm-3">{% trans "Hardware" %}</h5>
         </div>
         {% render_field form.serial %}
         {% render_field form.manufacturer %}
@@ -29,22 +30,22 @@
           <ul class="nav nav-pills" role="tablist">
             <li role="presentation" class="nav-item">
                 <button role="tab" type="button" id="device_type_tab" data-bs-toggle="tab" aria-controls="device_type" data-bs-target="#device_type" class="nav-link {% if form.initial.device_type or form.no_hardware_type %}active{% endif %}">
-                  Device
+                  {% trans "Device" %}
                 </button>
               </li>
             <li role="presentation" class="nav-item">
                 <button role="tab" type="button" id="module_type_tab" data-bs-toggle="tab" aria-controls="module_type" data-bs-target="#module_type" class="nav-link {% if form.initial.module_type %}active{% endif %}">
-                  Module
+                  {% trans "Module" %}
                 </button>
               </li>
             <li role="presentation" class="nav-item">
                 <button role="tab" type="button" id="inventoryitem_type_tab" data-bs-toggle="tab" aria-controls="inventoryitem_type" data-bs-target="#inventoryitem_type" class="nav-link {% if form.initial.inventoryitem_type %}active{% endif %}">
-                  Inventory Item
+                  {% trans "Inventory Item" %}
                 </button>
               </li>
             <li role="presentation" class="nav-item">
                 <button role="tab" type="button" id="rack_type_tab" data-bs-toggle="tab" aria-controls="rack_type" data-bs-target="#rack_type" class="nav-link {% if form.initial.rack_type %}active{% endif %}">
-                  Rack
+                  {% trans "Rack" %}
                 </button>
               </li>
           </ul>
@@ -67,7 +68,7 @@
 
     <div class="field-group my-5">
         <div class="row mb-2">
-          <h5 class="offset-sm-3">Purchase</h5>
+          <h5 class="offset-sm-3">{% trans "Purchase" %}</h5>
         </div>
         {% render_field form.owner %}
         {% render_field form.purchase %}
@@ -78,7 +79,7 @@
 
     <div class="field-group my-5">
         <div class="row mb-2">
-          <h5 class="offset-sm-3">Assigned to</h5>
+          <h5 class="offset-sm-3">{% trans "Assigned to" %}</h5>
         </div>
         {% render_field form.tenant %}
         {% render_field form.contact_group %}
@@ -87,7 +88,7 @@
 
     <div class="field-group my-5">
         <div class="row mb-2">
-          <h5 class="offset-sm-3">Location</h5>
+          <h5 class="offset-sm-3">{% trans "Location" %}</h5>
         </div>
         {% render_field form.storage_site %}
         {% render_field form.storage_location %}
@@ -96,14 +97,14 @@
     {% if form.custom_fields %}
         <div class="field-group my-5">
             <div class="row mb-2">
-              <h5 class="offset-sm-3">Custom Fields</h5>
+              <h5 class="offset-sm-3">{% trans "Custom Fields" %}</h5>
             </div>
             {% render_custom_fields form %}
         </div>
     {% endif %}
 
     <div class="field-group mb-5">
-        <h5 class="text-center">Comments</h5>
+        <h5 class="text-center">{% trans "Comments" %}</h5>
         {% render_field form.comments %}
     </div>
 

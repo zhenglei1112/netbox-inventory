@@ -3,6 +3,8 @@ from datetime import date
 from django.db import models
 from django.forms import ValidationError
 
+from django.utils.translation import gettext_lazy as _
+
 from netbox.models import NestedGroupModel
 from netbox.models.features import ImageAttachmentsMixin
 
@@ -37,7 +39,7 @@ class InventoryItemGroup(NestedGroupModel, NamedModel):
                 fields=('name',),
                 name='%(app_label)s_%(class)s_name',
                 condition=models.Q(parent__isnull=True),
-                violation_error_message='A top-level group with this name already exists.',
+                violation_error_message=_('A top-level group with this name already exists.'),
             ),
         )
 
@@ -54,9 +56,11 @@ class InventoryItemType(NamedModel, ImageAttachmentsMixin):
         to='dcim.Manufacturer',
         on_delete=models.PROTECT,
         related_name='inventoryitem_types',
+        verbose_name=_('manufacturer'),
     )
     model = models.CharField(
         max_length=100,
+        verbose_name=_('model'),
     )
     slug = models.SlugField(
         max_length=100,
@@ -65,7 +69,7 @@ class InventoryItemType(NamedModel, ImageAttachmentsMixin):
         max_length=50,
         blank=True,
         help_text='Discrete part number (optional)',
-        verbose_name='Part Number',
+        verbose_name=_('Part Number'),
     )
     inventoryitem_group = models.ForeignKey(
         to='netbox_inventory.InventoryItemGroup',
@@ -73,7 +77,7 @@ class InventoryItemType(NamedModel, ImageAttachmentsMixin):
         related_name='inventoryitem_types',
         blank=True,
         null=True,
-        verbose_name='Inventory Item Group',
+        verbose_name=_('Inventory Item Group'),
     )
 
     clone_fields = [
@@ -110,11 +114,12 @@ class Asset(NamedModel, ImageAttachmentsMixin):
     # fields that identify asset
     #
     name = models.CharField(
-        help_text='Can be used to quickly identify a particular asset',
+        help_text=_('Can be used to quickly identify a particular asset'),
         max_length=128,
         blank=True,
         null=False,
         default='',
+        verbose_name=_('name'),
     )
     asset_tag = models.CharField(
         help_text='Identifier assigned by owner',
@@ -122,12 +127,12 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         blank=True,
         null=True,
         default=None,
-        verbose_name='Asset Tag',
+        verbose_name=_('Asset Tag'),
     )
     serial = models.CharField(
         help_text='Identifier assigned by manufacturer',
         max_length=60,
-        verbose_name='Serial Number',
+        verbose_name=_('Serial Number'),
         blank=True,
         null=True,
         default=None,
@@ -139,7 +144,8 @@ class Asset(NamedModel, ImageAttachmentsMixin):
     status = models.CharField(
         max_length=30,
         choices=AssetStatusChoices,
-        help_text='Asset lifecycle status',
+        help_text=_('Asset lifecycle status'),
+        verbose_name=_('status'),
     )
 
     #
@@ -151,7 +157,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assets',
         blank=True,
         null=True,
-        verbose_name='Device Type',
+        verbose_name=_('Device Type'),
     )
     module_type = models.ForeignKey(
         to='dcim.ModuleType',
@@ -159,7 +165,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assets',
         blank=True,
         null=True,
-        verbose_name='Module Type',
+        verbose_name=_('Module Type'),
     )
     inventoryitem_type = models.ForeignKey(
         to='netbox_inventory.InventoryItemType',
@@ -167,7 +173,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='+',
         blank=True,
         null=True,
-        verbose_name='Inventory Item Type',
+        verbose_name=_('Inventory Item Type'),
     )
     rack_type = models.ForeignKey(
         to='dcim.RackType',
@@ -175,7 +181,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assets',
         blank=True,
         null=True,
-        verbose_name='Rack Type',
+        verbose_name=_('Rack Type'),
     )
 
     #
@@ -187,6 +193,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assigned_asset',
         blank=True,
         null=True,
+        verbose_name=_('Device'),
     )
     module = models.OneToOneField(
         to='dcim.Module',
@@ -194,6 +201,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assigned_asset',
         blank=True,
         null=True,
+        verbose_name=_('Module'),
     )
     inventoryitem = models.OneToOneField(
         to='dcim.InventoryItem',
@@ -201,7 +209,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assigned_asset',
         blank=True,
         null=True,
-        verbose_name='Inventory Item',
+        verbose_name=_('Inventory Item'),
     )
     rack = models.OneToOneField(
         to='dcim.Rack',
@@ -209,14 +217,16 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='assigned_asset',
         blank=True,
         null=True,
+        verbose_name=_('Rack'),
     )
     tenant = models.ForeignKey(
-        help_text='Tenant using this asset',
+        help_text=_('Tenant using this asset'),
         to='tenancy.Tenant',
         on_delete=models.PROTECT,
         related_name='+',
         blank=True,
         null=True,
+        verbose_name=_('Tenant'),
     )
     contact = models.ForeignKey(
         help_text='Contact using this asset',
@@ -225,6 +235,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='+',
         blank=True,
         null=True,
+        verbose_name=_('Contact'),
     )
 
     storage_location = models.ForeignKey(
@@ -234,47 +245,50 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         related_name='+',
         blank=True,
         null=True,
-        verbose_name='Storage Location',
+        verbose_name=_('Storage Location'),
     )
 
     #
     # purchase info
     #
     owner = models.ForeignKey(
-        help_text='Who owns this asset',
+        help_text=_('Who owns this asset'),
         to='tenancy.Tenant',
         on_delete=models.PROTECT,
         related_name='+',
         blank=True,
         null=True,
+        verbose_name=_('Owner'),
     )
     delivery = models.ForeignKey(
-        help_text='Delivery this asset was part of',
+        help_text=_('Delivery this asset was part of'),
         to='netbox_inventory.Delivery',
         on_delete=models.PROTECT,
         related_name='assets',
         blank=True,
         null=True,
+        verbose_name=_('Delivery'),
     )
     purchase = models.ForeignKey(
-        help_text='Purchase through which this asset was purchased',
+        help_text=_('Purchase through which this asset was purchased'),
         to='netbox_inventory.Purchase',
         on_delete=models.PROTECT,
         related_name='assets',
         blank=True,
         null=True,
+        verbose_name=_('Purchase'),
     )
     warranty_start = models.DateField(
-        help_text='First date warranty for this asset is valid',
+        help_text=_('First date warranty for this asset is valid'),
         blank=True,
         null=True,
-        verbose_name='Warranty Start',
+        verbose_name=_('Warranty Start'),
     )
     warranty_end = models.DateField(
-        help_text='Last date warranty for this asset is valid',
+        help_text=_('Last date warranty for this asset is valid'),
         blank=True,
         null=True,
-        verbose_name='Warranty End',
+        verbose_name=_('Warranty End'),
     )
 
     clone_fields = [

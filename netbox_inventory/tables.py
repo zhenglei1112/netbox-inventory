@@ -36,12 +36,12 @@ class InventoryItemGroupTable(NetBoxTable):
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
         url_params={'inventoryitem_group_id': 'pk'},
-        verbose_name='Assets',
+        verbose_name=_('Assets'),
     )
     inventoryitem_type_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:inventoryitemtype_list',
         url_params={'inventoryitem_group_id': 'pk'},
-        verbose_name='Inventory Item Types',
+        verbose_name=_('Inventory Item Types'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
@@ -81,7 +81,7 @@ class InventoryItemTypeTable(NetBoxTable):
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
         url_params={'inventoryitem_type_id': 'pk'},
-        verbose_name='Assets',
+        verbose_name=_('Assets'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
@@ -128,12 +128,12 @@ class AssetTable(NetBoxTable):
     )
     hardware_type = tables.Column(
         linkify=True,
-        verbose_name='Hardware Type',
+        verbose_name=_('Hardware Type'),
     )
     inventoryitem_group = tables.Column(
         accessor='inventoryitem_type__inventoryitem_group',
         linkify=True,
-        verbose_name='Inventory Item Group',
+        verbose_name=_('Inventory Item Group'),
     )
     status = columns.ChoiceFieldColumn()
     hardware = tables.Column(
@@ -143,23 +143,23 @@ class AssetTable(NetBoxTable):
     hardware_role = tables.Column(
         accessor=columns.Accessor('hardware__role'),
         linkify=True,
-        verbose_name='Hardware Role',
+        verbose_name=_('Hardware Role'),
     )
     installed_site = tables.Column(
         linkify=True,
-        verbose_name='Installed Site',
+        verbose_name=_('Installed Site'),
     )
     installed_location = tables.Column(
         linkify=True,
-        verbose_name='Installed Location',
+        verbose_name=_('Installed Location'),
     )
     installed_rack = tables.Column(
         linkify=True,
-        verbose_name='Installed Rack',
+        verbose_name=_('Installed Rack'),
     )
     installed_device = tables.Column(
         linkify=True,
-        verbose_name='Installed Device',
+        verbose_name=_('Installed Device'),
     )
     tenant = tables.Column(
         linkify=True,
@@ -185,27 +185,27 @@ class AssetTable(NetBoxTable):
     )
     purchase_date = columns.DateColumn(
         accessor='purchase__date',
-        verbose_name='Purchase Date',
+        verbose_name=_('Purchase Date'),
     )
     delivery_date = columns.DateColumn(
         accessor='delivery__date',
-        verbose_name='Delivery Date',
+        verbose_name=_('Delivery Date'),
     )
     current_site = tables.Column(
         linkify=True,
-        verbose_name='Current Site',
+        verbose_name=_('Current Site'),
         orderable=False,
     )
     current_location = tables.Column(
         linkify=True,
-        verbose_name='Current Location',
+        verbose_name=_('Current Location'),
         orderable=False,
     )
     warranty_progress = columns.TemplateColumn(
         template_code=WARRANTY_PROGRESSBAR,
         order_by='warranty_end',
         # orderable=False,
-        verbose_name='Warranty remaining',
+        verbose_name=_('Warranty remaining'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
@@ -414,17 +414,17 @@ class SupplierTable(ContactsColumnMixin, NetBoxTable):
     purchase_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:purchase_list',
         url_params={'supplier_id': 'pk'},
-        verbose_name='Purchases',
+        verbose_name=_('Purchases'),
     )
     delivery_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:delivery_list',
         url_params={'supplier_id': 'pk'},
-        verbose_name='Deliveries',
+        verbose_name=_('Deliveries'),
     )
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
         url_params={'supplier_id': 'pk'},
-        verbose_name='Assets',
+        verbose_name=_('Assets'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
@@ -464,12 +464,12 @@ class PurchaseTable(NetBoxTable):
     delivery_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:delivery_list',
         url_params={'purchase_id': 'pk'},
-        verbose_name='Deliveries',
+        verbose_name=_('Deliveries'),
     )
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
         url_params={'purchase_id': 'pk'},
-        verbose_name='Assets',
+        verbose_name=_('Assets'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
@@ -509,11 +509,11 @@ class DeliveryTable(NetBoxTable):
         linkify=True,
     )
     date = columns.DateColumn(
-        verbose_name='Delivery Date',
+        verbose_name=_('Delivery Date'),
     )
     purchase_date = columns.DateColumn(
         accessor=columns.Accessor('purchase__date'),
-        verbose_name='Purchase Date',
+        verbose_name=_('Purchase Date'),
     )
     receiving_contact = tables.Column(
         linkify=True,
@@ -524,7 +524,7 @@ class DeliveryTable(NetBoxTable):
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
         url_params={'delivery_id': 'pk'},
-        verbose_name='Assets',
+        verbose_name=_('Assets'),
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()

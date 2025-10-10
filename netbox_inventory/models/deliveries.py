@@ -5,6 +5,8 @@ from netbox.models.features import ContactsMixin
 from ..choices import PurchaseStatusChoices
 from .mixins import NamedModel
 
+from django.utils.translation import gettext_lazy as _
+
 
 class Supplier(NamedModel, ContactsMixin):
     """
@@ -28,22 +30,24 @@ class Purchase(NamedModel):
 
     name = models.CharField(max_length=100)
     supplier = models.ForeignKey(
-        help_text='Legal entity this purchase was made at',
+        help_text=_('Legal entity this purchase was made at'),
         to='netbox_inventory.Supplier',
         on_delete=models.PROTECT,
         related_name='purchases',
         blank=False,
         null=False,
+        verbose_name=_('Supplier'),
     )
     status = models.CharField(
         max_length=30,
         choices=PurchaseStatusChoices,
-        help_text='Status of purchase',
+        help_text=_('Status of purchase'),
     )
     date = models.DateField(
-        help_text='Date when this purchase was made',
+        help_text=_('Date when this purchase was made'),
         blank=True,
         null=True,
+        verbose_name=_('Date'),
     )
 
     clone_fields = ['supplier', 'date', 'status', 'description', 'comments']
@@ -67,25 +71,28 @@ class Delivery(NamedModel):
 
     name = models.CharField(max_length=100)
     purchase = models.ForeignKey(
-        help_text='Purchase that this delivery is part of',
+        help_text=_('Purchase that this delivery is part of'),
         to='netbox_inventory.Purchase',
         on_delete=models.PROTECT,
         related_name='orders',
         blank=False,
         null=False,
+        verbose_name=_('Purchase'),
     )
     date = models.DateField(
-        help_text='Date when this delivery was made',
+        help_text=_('Date when this delivery was made'),
         blank=True,
         null=True,
+        verbose_name=_('Date'),
     )
     receiving_contact = models.ForeignKey(
-        help_text='Contact that accepted this delivery',
+        help_text=_('Contact that accepted this delivery'),
         to='tenancy.Contact',
         on_delete=models.PROTECT,
         related_name='deliveries',
         blank=True,
         null=True,
+        verbose_name=_('Receiving Contact'),
     )
 
     clone_fields = ['purchase', 'date', 'receiving_contact', 'description', 'comments']

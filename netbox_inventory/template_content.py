@@ -2,6 +2,8 @@ from django.db.models import Model
 from django.http import HttpRequest
 from django.template import Template
 
+from django.utils.translation import gettext_lazy as _
+
 from core.models import ObjectType
 from netbox.plugins import PluginTemplateExtension
 
@@ -87,17 +89,17 @@ class AssetLocationCounts(PluginTemplateExtension):
         context = {
             'asset_stats': [
                 {
-                    'label': 'Installed',
+                    'label': _('Installed'),
                     'filter_field': f'installed_{self.location_type}_id',
                     'count': count_installed,
                 },
                 {
-                    'label': 'Stored',
+                    'label': _('Stored'),
                     'filter_field': f'storage_{self.location_type}_id',
                     'count': count_stored,
                 },
                 {
-                    'label': 'Total',
+                    'label': _('Total'),
                     'filter_field': f'located_{self.location_type}_id',
                     'count': count_installed + count_stored,
                 },
@@ -152,25 +154,25 @@ class ManufacturerAssetCounts(PluginTemplateExtension):
         context = {
             'asset_stats': [
                 {
-                    'label': 'Device',
+                    'label': _('Device'),
                     'filter_field': 'manufacturer_id',
                     'extra_filter': '&kind=device',
                     'count': count_device,
                 },
                 {
-                    'label': 'Module',
+                    'label': _('Module'),
                     'filter_field': 'manufacturer_id',
                     'extra_filter': '&kind=module',
                     'count': count_module,
                 },
                 {
-                    'label': 'Inventory Item',
+                    'label': _('Inventory Item'),
                     'filter_field': 'manufacturer_id',
                     'extra_filter': '&kind=inventoryitem',
                     'count': count_inventoryitem,
                 },
                 {
-                    'label': 'Total',
+                    'label': _('Total'),
                     'filter_field': 'manufacturer_id',
                     'count': count_device + count_module + count_inventoryitem,
                 },
@@ -203,7 +205,7 @@ class RackAssetCounts(PluginTemplateExtension):
         context = {
             'asset_stats': [
                 {
-                    'label': 'Installed',
+                    'label': _('Installed'),
                     'filter_field': 'installed_rack_id',
                     'count': assets_qs.count(),
                 },
@@ -223,14 +225,14 @@ class TenantAssetCounts(PluginTemplateExtension):
         context = {
             'asset_stats': [
                 {
-                    'label': 'Assigned',
+                    'label': _('Assigned'),
                     'filter_field': 'tenant_id',
                     'count': Asset.objects.restrict(user, 'view')
                     .filter(tenant=object)
                     .count(),
                 },
                 {
-                    'label': 'Owned',
+                    'label': _('Owned'),
                     'filter_field': 'owner_id',
                     'count': Asset.objects.restrict(user, 'view')
                     .filter(owner=object)
@@ -252,7 +254,7 @@ class ContactAssetCounts(PluginTemplateExtension):
         context = {
             'asset_stats': [
                 {
-                    'label': 'Assigned',
+                    'label': _('Assigned'),
                     'filter_field': 'contact_id',
                     'count': Asset.objects.restrict(user, 'view')
                     .filter(contact=object)

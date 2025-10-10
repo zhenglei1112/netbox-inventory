@@ -1,6 +1,9 @@
 {% extends 'generic/object.html' %}
 {% load helpers %}
 {% load plugins %}
+{% load i18n %}
+
+{% block title %}{{ object }}{% endblock %}
 
 {% block breadcrumbs %}
   {{ block.super }}
@@ -13,36 +16,36 @@
   <div class="row mb-3">
     <div class="col col-md-6">
       <div class="card">
-        <h5 class="card-header">Purchase</h5>
+        <h5 class="card-header">{% trans "Purchase" %}</h5>
         <table class="table table-hover attr-table">
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row">{% trans "Name" %}</th>
             <td>{{ object.name }}</td>
           </tr>
           <tr>
-            <th scope="row">Supplier</th>
+            <th scope="row">{% trans "Supplier" %}</th>
             <td>{{ object.supplier|linkify }}</td>
           </tr>
           <tr>
-            <th scope="row">Status</th>
+            <th scope="row">{% trans "Status" %}</th>
             <td>{% badge object.get_status_display bg_color=object.get_status_color %}</td>
           </tr>
           <tr>
-            <th scope="row">Date</th>
+            <th scope="row">{% trans "Date" %}</th>
             <td>{{ object.date|isodate|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Description</th>
+            <th scope="row">{% trans "Description" %}</th>
             <td>{{ object.description|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Deliveries</th>
+            <th scope="row">{% trans "Deliveries" %}</th>
             <td>
               <a href="{% url 'plugins:netbox_inventory:delivery_list' %}?purchase_id={{ object.pk }}">{{ delivery_count }}</a>
             </td>
           </tr>
           <tr>
-            <th scope="row">Assets</th>
+            <th scope="row">{% trans "Assets" %}</th>
             <td>
               <a href="{% url 'plugins:netbox_inventory:asset_list' %}?purchase_id={{ object.pk }}">{{ asset_count }}</a>
             </td>
@@ -62,11 +65,11 @@
     <div class="col col-md-12">
       <div class="card">
         <h5 class="card-header">
-          Deliveries
+          {% trans "Deliveries" %}
           {% if perms.netbox_inventory.add_delivery %}
             <div class="card-actions">
               <a href="{% url 'plugins:netbox_inventory:delivery_add' %}?purchase={{ object.pk }}&return_url={{ object.get_absolute_url }}" class="btn btn-ghost-primary btn-sm">
-                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> Add a Delivery
+                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> {% trans "Add a Delivery" %}
               </a>
             </div>
           {% endif %}
@@ -75,11 +78,11 @@
       </div>
       <div class="card">
         <h5 class="card-header">
-          Purchased Assets
+          {% trans "Purchased Assets" %}
           {% if perms.netbox_inventory.add_asset %}
             <div class="card-actions">
               <a href="{% url 'plugins:netbox_inventory:asset_add' %}?purchase={{ object.pk }}&return_url={{ object.get_absolute_url }}" class="btn btn-ghost-primary btn-sm">
-                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> Add an Asset
+                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> {% trans "Add an Asset" %}
               </a>
             </div>
           {% endif %}

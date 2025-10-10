@@ -1,0 +1,787 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-10 15:01+0800\n"
+"PO-Revision-Date: 2025-10-10 15:01+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
+
+#: .\netbox_inventory\filtersets.py:664
+msgid "Assigned Audit Flow (ID)"
+msgstr ""
+
+#: .\netbox_inventory\filtersets.py:676
+msgid "Audit Flow Page (ID)"
+msgstr ""
+
+#: .\netbox_inventory\filtersets.py:721
+msgid "Source (slug)"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_edit.py:375
+#: .\netbox_inventory\forms\bulk_edit.py:392
+msgid "Attributes"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_import.py:517
+#: .\netbox_inventory\forms\bulk_import.py:542
+#: .\netbox_inventory\tables.py:573
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:20
+msgid "Object Type"
+msgstr ""
+
+#: .\netbox_inventory\forms\bulk_import.py:567
+msgid "Source slug of this audit trail."
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:493
+msgid "Object type"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:501
+msgid "Audit flow"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:544
+msgid "After"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:549
+msgid "Before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:558 .\netbox_inventory\tables.py:670
+msgid "Time"
+msgstr ""
+
+#: .\netbox_inventory\forms\models.py:427
+msgid ""
+"Enter object filter in <a href=\"https://json.org/\">JSON</a> format, "
+"mapping attributes to values."
+msgstr ""
+
+#: .\netbox_inventory\forms\models.py:442
+#: .\netbox_inventory\forms\models.py:480
+msgid "Assignment"
+msgstr ""
+
+#: .\netbox_inventory\forms\reassign.py:53
+#: .\netbox_inventory\forms\reassign.py:233
+msgid "New Asset"
+msgstr ""
+
+#: .\netbox_inventory\forms\reassign.py:55
+#: .\netbox_inventory\forms\reassign.py:235
+msgid "Old Asset"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:42
+msgid "A top-level group with this name already exists."
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:59
+msgid "manufacturer"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:63
+msgid "model"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:72
+msgid "Part Number"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:80 .\netbox_inventory\tables.py:136
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:48
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:27
+msgid "Inventory Item Group"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:117
+msgid "Can be used to quickly identify a particular asset"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:122
+#: .\netbox_inventory\models\mixins.py:14
+msgid "name"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:130
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:31
+msgid "Asset Tag"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:135
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:35
+msgid "Serial Number"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:147
+msgid "Asset lifecycle status"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:148
+msgid "status"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:160
+msgid "Device Type"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:168
+msgid "Module Type"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:176
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:83
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:24
+msgid "Inventory Item Type"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:184
+msgid "Rack Type"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:196
+#: .\netbox_inventory\template_content.py:157
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:146
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:33
+msgid "Device"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:204
+#: .\netbox_inventory\template_content.py:163
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:38
+msgid "Module"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:212
+#: .\netbox_inventory\template_content.py:169
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:43
+msgid "Inventory Item"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:220
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:142
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:48
+msgid "Rack"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:223
+msgid "Tenant using this asset"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:229
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:98
+msgid "Tenant"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:238
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:107
+msgid "Contact"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:248
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:62
+msgid "Storage Location"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:255
+msgid "Who owns this asset"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:261
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:159
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:37
+msgid "Owner"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:264
+msgid "Delivery this asset was part of"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:270
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:167
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:20
+msgid "Delivery"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:273
+msgid "Purchase through which this asset was purchased"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:279
+#: .\netbox_inventory\models\deliveries.py:80
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:156
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:163
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:71
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:27
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:41
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:19
+msgid "Purchase"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:282
+msgid "First date warranty for this asset is valid"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:285
+msgid "Warranty Start"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:288
+msgid "Last date warranty for this asset is valid"
+msgstr ""
+
+#: .\netbox_inventory\models\assets.py:291
+msgid "Warranty End"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:67
+msgid "Filter must be defined as a dictionary mapping attributes to values."
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:82
+#, python-brace-format
+msgid "Invalid filter for {model}: {error}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:108
+msgid "audit flow page"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:109
+msgid "audit flow pages"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:123
+#, python-brace-format
+msgid "Object type not supported: No list view for {model}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:147
+msgid "enabled"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:163
+msgid "audit flow"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:164
+msgid "audit flows"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:188
+msgid "display weight"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:190
+msgid "Assignments with higher weights appear later in an audit flow."
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:208
+msgid "audit flow page assignment"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:209
+msgid "audit flow page assignments"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:220
+#, python-brace-format
+msgid "Cannot use page for this flow: {error}"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:337
+msgid "audit trail source"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:338
+msgid "audit trail sources"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:388
+msgid "audit trail"
+msgstr ""
+
+#: .\netbox_inventory\models\audit.py:389
+msgid "audit trails"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:33
+msgid "Legal entity this purchase was made at"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:39
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:26
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:21
+msgid "Supplier"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:44
+msgid "Status of purchase"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:47
+msgid "Date when this purchase was made"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:50
+#: .\netbox_inventory\models\deliveries.py:86
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:40
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:34
+msgid "Date"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:74
+msgid "Purchase that this delivery is part of"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:83
+msgid "Date when this delivery was made"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:89
+msgid "Contact that accepted this delivery"
+msgstr ""
+
+#: .\netbox_inventory\models\deliveries.py:95
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:31
+msgid "Receiving Contact"
+msgstr ""
+
+#: .\netbox_inventory\models\mixins.py:19
+msgid "description"
+msgstr ""
+
+#: .\netbox_inventory\models\mixins.py:24
+msgid "comments"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:17 .\netbox_inventory\navigation.py:32
+#: .\netbox_inventory\navigation.py:47 .\netbox_inventory\navigation.py:88
+#: .\netbox_inventory\navigation.py:103 .\netbox_inventory\navigation.py:118
+#: .\netbox_inventory\navigation.py:164 .\netbox_inventory\navigation.py:183
+#: .\netbox_inventory\navigation.py:215
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_add_object.html:8
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_add_object.html:16
+msgid "Add"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:23 .\netbox_inventory\navigation.py:38
+#: .\netbox_inventory\navigation.py:53 .\netbox_inventory\navigation.py:94
+#: .\netbox_inventory\navigation.py:109 .\netbox_inventory\navigation.py:124
+#: .\netbox_inventory\navigation.py:170 .\netbox_inventory\navigation.py:189
+#: .\netbox_inventory\navigation.py:202 .\netbox_inventory\navigation.py:221
+msgid "Import"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:62 .\netbox_inventory\tables.py:39
+#: .\netbox_inventory\tables.py:84 .\netbox_inventory\tables.py:427
+#: .\netbox_inventory\tables.py:472 .\netbox_inventory\tables.py:527
+#: .\netbox_inventory\tables.py:723 .\netbox_inventory\tables.py:733
+#: .\netbox_inventory\tables.py:743
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:48
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_stats_counts.html:5
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:42
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:135
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:47
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:48
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:44
+msgid "Assets"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:68 .\netbox_inventory\tables.py:44
+msgid "Inventory Item Types"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:74
+msgid "Inventory Item Groups"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:133
+msgid "Suppliers"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:139 .\netbox_inventory\tables.py:417
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:32
+msgid "Purchases"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:145 .\netbox_inventory\navigation.py:239
+#: .\netbox_inventory\tables.py:422 .\netbox_inventory\tables.py:467
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:42
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:68
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:38
+msgid "Deliveries"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:159
+msgid "Flows"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:178
+msgid "Flow Pages"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:197
+msgid "Audit Trails"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:210
+msgid "Audit Trail Sources"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:236
+msgid "Inventory"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:238
+msgid "Asset Management"
+msgstr ""
+
+#: .\netbox_inventory\navigation.py:240
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_run.html:8
+#: .\netbox_inventory\templates\netbox_inventory\inc\buttons\auditflow_run.html:16
+#: .\netbox_inventory\views\audittrail.py:107
+msgid "Audit"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:131
+msgid "Hardware Type"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:146
+msgid "Hardware Role"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:150
+msgid "Installed Site"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:154
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:122
+msgid "Installed Location"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:158
+msgid "Installed Rack"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:162
+msgid "Installed Device"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:188 .\netbox_inventory\tables.py:516
+msgid "Purchase Date"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:192 .\netbox_inventory\tables.py:512
+msgid "Delivery Date"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:196
+msgid "Current Site"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:201
+msgid "Current Location"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:208
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:179
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:45
+msgid "Warranty remaining"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:662
+msgid "Object"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:680
+msgid "Auditor"
+msgstr ""
+
+#: .\netbox_inventory\tables.py:686
+msgid "Auditor Name"
+msgstr ""
+
+#: .\netbox_inventory\template_content.py:92
+#: .\netbox_inventory\template_content.py:208
+msgid "Installed"
+msgstr ""
+
+#: .\netbox_inventory\template_content.py:97
+msgid "Stored"
+msgstr ""
+
+#: .\netbox_inventory\template_content.py:102
+#: .\netbox_inventory\template_content.py:175
+msgid "Total"
+msgstr ""
+
+#: .\netbox_inventory\template_content.py:228
+#: .\netbox_inventory\template_content.py:257
+msgid "Assigned"
+msgstr ""
+
+#: .\netbox_inventory\template_content.py:235
+msgid "Owned"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:20
+#: .\netbox_inventory\templates\netbox_inventory\asset_reassign.html:9
+msgid "Asset"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:23
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:12
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:23
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:12
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:29
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:30
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:22
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:24
+msgid "Name"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:27
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:16
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:44
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:16
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:38
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:39
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:38
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:28
+msgid "Description"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:39
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:33
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:57
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:30
+msgid "Status"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:43
+msgid "Type"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:73
+msgid "Assigned To"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:80
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:84
+#: .\netbox_inventory\templates\netbox_inventory\asset_create.html:8
+msgid "Create"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:91
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:21
+msgid "Edit Assignment"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:125
+msgid "Site"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:129
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:91
+msgid "Location"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:171
+msgid "Warranty start"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:175
+msgid "Warranty end"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_assign.html:9
+msgid "Assign Asset"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:14
+msgid "General"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:25
+msgid "Hardware"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:82
+msgid "Assigned to"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:100
+msgid "Custom Fields"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:107
+msgid "Comments"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\asset_reassign.html:16
+msgid "Select a different asset to assign to"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow.html:5
+msgid "Audit Flow"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow.html:10
+msgid "Enabled"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow_pages.html:10
+msgid "Assign page"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflow_run.html:59
+msgid "Mark seen"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\auditflowpage.html:5
+msgid "Audit Page Flow"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:9
+msgid "Audit Trail Source"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:68
+msgid "Delivered Assets"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:72
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:85
+msgid "Add an Asset"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:27
+msgid "Object Filter"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:32
+msgid "No filter defined"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:52
+msgid "None assigned"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:18
+msgid "Add inventory item type"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:34
+msgid "Parent"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:53
+msgid "Asset count by status"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:58
+msgid "Count"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:72
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:106
+msgid "No assets found"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:79
+msgid "Asset count by type & status"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:84
+msgid "Status - Count"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:116
+msgid "Child Groups"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:120
+msgid "Add Group"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:15
+msgid "Add asset"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:27
+msgid "Manufacturer"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:31
+msgid "Model"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:35
+msgid "Part number"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:43
+msgid "Group"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:72
+msgid "Add a Delivery"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:81
+msgid "Purchased Assets"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:12
+msgid "Add purchase"
+msgstr ""
+
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:63
+msgid "Supplied Assets"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:62
+msgid "Pages"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:426
+#, python-brace-format
+msgid "Marked {object} as seen"
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:449
+#, python-brace-format
+msgid ""
+"{object} does not match audit location. Please edit the object accordingly."
+msgstr ""
+
+#: .\netbox_inventory\views\auditflow.py:473
+msgid "No matching object found"
+msgstr ""
+
+#: .\netbox_inventory\views\audittrail.py:75
+#, python-brace-format
+msgid "Marked {count} {type} as seen"
+msgstr ""
+
+#: .\netbox_inventory\views\audittrailsource.py:31
+msgid "Trails"
+msgstr ""

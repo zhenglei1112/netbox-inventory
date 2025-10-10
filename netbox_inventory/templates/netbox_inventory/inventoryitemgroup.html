@@ -1,6 +1,9 @@
 {% extends 'generic/object.html' %}
 {% load helpers %}
 {% load plugins %}
+{% load i18n %}
+
+{% block title %}{{ object }}{% endblock %}
 
 {% block breadcrumbs %}
   {{ block.super }}
@@ -12,7 +15,7 @@
 {% block extra_controls %}
   {% if perms.netbox_inventory.add_inventoryitemtype %}
     <a href="{% url 'plugins:netbox_inventory:inventoryitemtype_add' %}?inventoryitem_group={{ object.pk }}" class="btn btn-primary">
-      <i class="mdi mdi-plus-thick" aria-hidden="true"></i> Add inventory item type
+      <i class="mdi mdi-plus-thick" aria-hidden="true"></i> {% trans "Add inventory item type" %}
     </a>
   {% endif %}
 {% endblock extra_controls %}
@@ -21,22 +24,22 @@
   <div class="row mb-3">
     <div class="col col-md-6">
       <div class="card">
-        <h5 class="card-header">Inventory Item Group</h5>
+        <h5 class="card-header">{% trans "Inventory Item Group" %}</h5>
         <table class="table table-hover attr-table">
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row">{% trans "Name" %}</th>
             <td>{{ object.name }}</td>
           </tr>
           <tr>
-            <th scope="row">Parent</th>
+            <th scope="row">{% trans "Parent" %}</th>
             <td>{{ object.parent|linkify|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Description</th>
+            <th scope="row">{% trans "Description" %}</th>
             <td>{{ object.description|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Assets</th>
+            <th scope="row">{% trans "Assets" %}</th>
             <td>
               <a href="{% url 'plugins:netbox_inventory:asset_list' %}?inventoryitem_group_id={{ object.pk }}">{{ asset_table.rows|length }}</a>
             </td>
@@ -47,12 +50,12 @@
 
 
         <div class="card">
-        <h5 class="card-header">Asset count by status</h5>
+        <h5 class="card-header">{% trans "Asset count by status" %}</h5>
         <table class="table table-hover object-list">
         <thead>
           <tr>
-            <th>Status</th>
-            <th>Count</th>
+            <th>{% trans "Status" %}</th>
+            <th>{% trans "Count" %}</th>
           </tr>
         </thead>
         <tbody>
@@ -66,19 +69,19 @@
             </td>
           </tr>
           {% empty %}
-          <tr><td class="text-center text-muted" colspan="2">— No assets found —</td></tr>
+          <tr><td class="text-center text-muted" colspan="2">— {% trans "No assets found" %} —</td></tr>
           {% endfor %}
         </tbody>
         </table>
       </div>
 
       <div class="card">
-        <h5 class="card-header">Asset count by type & status</h5>
+        <h5 class="card-header">{% trans "Asset count by type & status" %}</h5>
         <table class="table table-hover object-list table-striped">
         <thead>
           <tr>
-            <th>Inventory Item Type</th>
-            <th>Status - Count</th>
+            <th>{% trans "Inventory Item Type" %}</th>
+            <th>{% trans "Status - Count" %}</th>
           </tr>
         </thead>
         <tbody>
@@ -100,7 +103,7 @@
             </td>
           </tr>
           {% empty %}
-          <tr><td class="text-center text-muted" colspan="2">— No assets found —</td></tr>
+          <tr><td class="text-center text-muted" colspan="2">— {% trans "No assets found" %} —</td></tr>
           {% endfor %}
         </tbody>
         </table>
@@ -110,11 +113,11 @@
     <div class="col col-md-6">
       <div class="card">
         <h5 class="card-header">
-          Child Groups
+          {% trans "Child Groups" %}
           {% if perms.netbox_inventory.add_inventoryitemgroup %}
             <div class="card-actions">
               <a href="{% url 'plugins:netbox_inventory:inventoryitemgroup_add' %}?parent={{ object.pk }}&return_url={{ object.get_absolute_url }}" class="btn btn-ghost-primary btn-sm">
-                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> Add Group
+                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> {% trans "Add Group" %}
               </a>
             </div>
           {% endif %}
@@ -129,7 +132,7 @@
   <div class="row mb-3">
     <div class="col col-md-12">
       <div class="card">
-        <h5 class="card-header">Assets</h5>
+        <h5 class="card-header">{% trans "Assets" %}</h5>
         {% htmx_table 'plugins:netbox_inventory:asset_list' inventoryitem_group_id=object.pk %}
       </div>
       {% plugin_full_width_page object %}

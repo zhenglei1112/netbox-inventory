@@ -1,6 +1,7 @@
 {% extends 'generic/object.html' %}
 {% load helpers %}
 {% load plugins %}
+{% load i18n %}
 
 {% block breadcrumbs %}
   {{ block.super }}
@@ -16,18 +17,18 @@
   <div class="row mb-3">
     <div class="col col-md-6">
       <div class="card">
-        <h5 class="card-header">Delivery</h5>
+        <h5 class="card-header">{% trans "Delivery" %}</h5>
         <table class="table table-hover attr-table">
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row">{% trans "Name" %}</th>
             <td>{{ object.name }}</td>
           </tr>
           <tr>
-            <th scope="row">Purchase</th>
+            <th scope="row">{% trans "Purchase" %}</th>
             <td>{{ object.purchase|linkify }}</td>
           </tr>
           <tr>
-            <th scope="row">Receiving Contact</th>
+            <th scope="row">{% trans "Receiving Contact" %}</th>
             <td>
               {% if object.receiving_contact.group %}
                 {{ object.receiving_contact.group|linkify }} /
@@ -36,15 +37,15 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Date</th>
+            <th scope="row">{% trans "Date" %}</th>
             <td>{{ object.date|isodate|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Description</th>
+            <th scope="row">{% trans "Description" %}</th>
             <td>{{ object.description|placeholder }}</td>
           </tr>
           <tr>
-            <th scope="row">Assets</th>
+            <th scope="row">{% trans "Assets" %}</th>
             <td>
               <a href="{% url 'plugins:netbox_inventory:asset_list' %}?delivery_id={{ object.pk }}">{{ asset_count }}</a>
             </td>
@@ -64,11 +65,11 @@
     <div class="col col-md-12">
       <div class="card">
         <h5 class="card-header">
-          Delivered Assets
+          {% trans "Delivered Assets" %}
           {% if perms.netbox_inventory.add_asset %}
             <div class="card-actions">
               <a href="{% url 'plugins:netbox_inventory:asset_add' %}?delivery={{ object.pk }}&purchase={{ object.purchase.pk }}&return_url={{ object.get_absolute_url }}" class="btn btn-ghost-primary btn-sm">
-                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> Add an Asset
+                <i class="mdi mdi-plus-thick" aria-hidden="true"></i> {% trans "Add an Asset" %}
               </a>
             </div>
           {% endif %}

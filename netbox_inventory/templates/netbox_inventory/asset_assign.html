@@ -1,4 +1,5 @@
 {% extends 'generic/object_edit.html' %}
+{% load i18n %}
 
 {% block title %}Assign {{ object.hardware_type.manufacturer }} {{ object }}{% endblock %}
 
@@ -6,7 +7,7 @@
   <ul class="nav nav-tabs px-3">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="edit-form-tab" data-bs-toggle="tab" data-bs-target="#edit-form" type="button" role="tab" aria-controls="edit-form" aria-selected="true">
-        Assign Asset
+        {% trans "Assign Asset" %}
       </button>
     </li>
   </ul>

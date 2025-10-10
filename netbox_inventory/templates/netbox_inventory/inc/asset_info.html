@@ -1,4 +1,5 @@
 {% load helpers %}
+{% load i18n %}
 {# renders panel on object (device, module, inventory_item) with asset info assigned to it #}
 
 <div class="card">
@@ -18,7 +19,7 @@
         <a href="{% url 'plugins:netbox_inventory:asset_rack_reassign' object.pk %}" class="btn btn-sm btn-ghost-orange">
         {% endif %}
         {% endwith %}
-          <i class="mdi mdi-vector-link" aria-hidden="true"></i> Edit Assignment
+          <i class="mdi mdi-vector-link" aria-hidden="true"></i> {% trans "Edit Assignment" %}
         </a>
       </div>
     {% endif %}
@@ -26,29 +27,29 @@
   {% if asset %}
   <table class="table table-hover attr-table">
     <tr>
-      <th scope="row"><span title="Asset name">Name</span></th>
+      <th scope="row"><span title="Asset name">{% trans "Name" %}</span></th>
       <td><a href="{% url "plugins:netbox_inventory:asset" asset.pk %}">{{ asset.hardware_type.manufacturer }} {{ asset }}{% if asset.name %} ({{ asset.name }}){% endif %}</a></td>
     </tr>
     <tr>
-      <th scope="row"><span title="Asset status">Status</span></a></th>
+      <th scope="row"><span title="Asset status">{% trans "Status" %}</span></a></th>
       <td>{% badge asset.get_status_display bg_color=asset.get_status_color %}</a></td>
     </tr>
     <tr>
-      <th scope="row">Owner</th>
+      <th scope="row">{% trans "Owner" %}</th>
       <td>{{ asset.owner|linkify|placeholder }}</td>
     </tr>
     <tr>
-      <th scope="row">Purchase</th>
+      <th scope="row">{% trans "Purchase" %}</th>
       <td>{{ asset.purchase|linkify|placeholder }}</td>
     </tr>
     <tr>
-      <th>Warranty remaining</th>
+      <th>{% trans "Warranty remaining" %}</th>
       <td>
         {% include warranty_progressbar with record=asset %}
       </td>
     </tr>
   </table>
   {% else %}
-  <div class="card-body"><span class="text-muted">None assigned</span></div>
+  <div class="card-body"><span class="text-muted">{% trans "None assigned" %}</span></div>
   {% endif %}
 </div>
