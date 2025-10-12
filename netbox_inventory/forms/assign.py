@@ -1,5 +1,7 @@
 from django import forms
 
+from django.utils.translation import gettext_lazy as _
+
 from dcim.models import Device, InventoryItem, Location, Module, Rack, Site
 from netbox.forms import NetBoxModelForm
 from tenancy.models import Contact, Tenant
@@ -20,19 +22,21 @@ __all__ = (
 class AssetAssignMixin(forms.Form):
     name = forms.CharField(
         required=False,
-        label='Asset name',
+        label=_('Asset name'),
         help_text=Asset._meta.get_field('name').help_text,
     )
     tenant = DynamicModelChoiceField(
         queryset=Tenant.objects.all(),
         selector=True,
         required=False,
+        label='Tenant',
         help_text=Asset._meta.get_field('tenant').help_text,
     )
     contact = DynamicModelChoiceField(
         queryset=Contact.objects.all(),
         selector=True,
         required=False,
+        label='Contact',
         help_text=Asset._meta.get_field('contact').help_text,
     )
 
@@ -86,6 +90,7 @@ class AssetDeviceAssignForm(AssetAssignMixin, NetBoxModelForm):
     site = DynamicModelChoiceField(
         queryset=Site.objects.all(),
         required=False,
+        label='Site',
         initial_params={'devices': '$device'},
     )
     device = DynamicModelChoiceField(

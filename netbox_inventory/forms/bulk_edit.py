@@ -63,12 +63,12 @@ class InventoryItemTypeBulkEditForm(NetBoxModelBulkEditForm):
     manufacturer = DynamicModelChoiceField(
         queryset=Manufacturer.objects.all(),
         required=False,
-        label='Manufacturer',
+        label=_('Manufacturer'),
     )
     inventoryitem_group = DynamicModelChoiceField(
         queryset=InventoryItemGroup.objects.all(),
         required=False,
-        label='Inventory Item Group',
+        label=_('Inventory Item Group'),
     )
     description = forms.CharField(
         max_length=200,
@@ -110,7 +110,7 @@ class AssetBulkEditForm(NetBoxModelBulkEditForm):
     device_type = DynamicModelChoiceField(
         queryset=DeviceType.objects.all(),
         required=False,
-        label='Device type',
+        label=_('Device type'),
     )
     # FIXME figure out how to only show set null checkbox
     device = forms.CharField(
@@ -120,7 +120,7 @@ class AssetBulkEditForm(NetBoxModelBulkEditForm):
     module_type = DynamicModelChoiceField(
         queryset=ModuleType.objects.all(),
         required=False,
-        label='Module type',
+        label=_('Module type'),
     )
     # FIXME figure out how to only show set null checkbox
     module = forms.CharField(
@@ -130,7 +130,7 @@ class AssetBulkEditForm(NetBoxModelBulkEditForm):
     rack_type = DynamicModelChoiceField(
         queryset=RackType.objects.all(),
         required=False,
-        label='Rack type',
+        label=_('Rack type'),
     )
     # FIXME figure out how to only show set null checkbox
     rack = forms.CharField(
@@ -153,12 +153,12 @@ class AssetBulkEditForm(NetBoxModelBulkEditForm):
         required=not Asset._meta.get_field('delivery').blank,
     )
     warranty_start = forms.DateField(
-        label='Warranty start',
+        label=_('Warranty start'),
         required=False,
         widget=DatePicker(),
     )
     warranty_end = forms.DateField(
-        label='Warranty end',
+        label=_('Warranty end'),
         required=False,
         widget=DatePicker(),
     )
@@ -171,7 +171,7 @@ class AssetBulkEditForm(NetBoxModelBulkEditForm):
         queryset=ContactGroup.objects.all(),
         required=False,
         null_option='None',
-        label='Contact Group',
+        label=_('Contact Group'),
         help_text='Filter contacts by group',
     )
     contact = DynamicModelChoiceField(
@@ -273,14 +273,14 @@ class PurchaseBulkEditForm(NetBoxModelBulkEditForm):
         initial='',
     )
     date = forms.DateField(
-        label='Date',
+        label=_('Date'),
         required=False,
         widget=DatePicker(),
     )
     supplier = DynamicModelChoiceField(
         queryset=Supplier.objects.all(),
         required=False,
-        label='Supplier',
+        label=_('Supplier'),
     )
     description = forms.CharField(
         required=False,
@@ -307,26 +307,26 @@ class PurchaseBulkEditForm(NetBoxModelBulkEditForm):
 
 class DeliveryBulkEditForm(NetBoxModelBulkEditForm):
     date = forms.DateField(
-        label='Date',
+        label=_('Date'),
         required=False,
         widget=DatePicker(),
     )
     purchase = DynamicModelChoiceField(
         queryset=Purchase.objects.all(),
         required=False,
-        label='Purchase',
+        label=_('Purchase'),
     )
     contact_group = DynamicModelChoiceField(
         queryset=ContactGroup.objects.all(),
         required=False,
         null_option='None',
-        label='Contact Group',
+        label=_('Contact Group'),
         help_text='Filter receiving contacts by group',
     )
     receiving_contact = DynamicModelChoiceField(
         queryset=Contact.objects.all(),
         required=False,
-        label='Receiving Contact',
+        label=_('Receiving Contact'),
         query_params={
             'group_id': '$contact_group',
         },

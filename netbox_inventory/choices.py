@@ -1,3 +1,5 @@
+from django.utils.translation import gettext_lazy as _
+
 from utilities.choices import ChoiceSet
 
 #
@@ -9,9 +11,11 @@ class AssetStatusChoices(ChoiceSet):
     key = 'Asset.status'
 
     CHOICES = [
-        ('stored', 'Stored', 'green'),
-        ('used', 'Used', 'blue'),
-        ('retired', 'Retired', 'gray'),
+        ('stored', _('stored'), 'green'),
+        ('used', _('used'), 'blue'),
+        ('under_repair', _('under_repair'), 'yellow'),
+        ('retired', _('retired'), 'gray'),
+        ('scrapped', _('scrapped'), 'darkgray'),
     ]
 
 
@@ -33,7 +37,7 @@ class PurchaseStatusChoices(ChoiceSet):
     key = 'Purchase.status'
 
     CHOICES = [
-        ('open', 'Open', 'cyan'),
-        ('partial', 'Partial', 'blue'),
-        ('closed', 'Closed', 'green'),
+        ('open', _('Open'), 'cyan'),
+        ('partial', _('Partial'), 'blue'),
+        ('closed', _('Closed'), 'green'),
     ]

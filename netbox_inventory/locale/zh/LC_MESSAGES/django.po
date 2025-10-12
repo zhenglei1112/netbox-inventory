@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-10 15:01+0800\n"
-"PO-Revision-Date: 2025-10-10 15:30+0800\n"
+"POT-Creation-Date: 2025-10-11 16:57+0800\n"
+"PO-Revision-Date: 2025-10-11 16:58+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -18,6 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.7\n"
+
+#: .\netbox_inventory\choices.py:14
+msgid "stored"
+msgstr "库存"
+
+#: .\netbox_inventory\choices.py:15
+msgid "used"
+msgstr "在用"
+
+#: .\netbox_inventory\choices.py:16
+msgid "under_repair"
+msgstr "送修"
+
+#: .\netbox_inventory\choices.py:17
+msgid "retired"
+msgstr "退役"
+
+#: .\netbox_inventory\choices.py:18
+msgid "scrapped"
+msgstr "报废"
+
+#: .\netbox_inventory\choices.py:40
+msgid "Open"
+msgstr "已开启"
+
+#: .\netbox_inventory\choices.py:41
+msgid "Partial"
+msgstr "部分完成"
+
+#: .\netbox_inventory\choices.py:42
+msgid "Closed"
+msgstr "已关闭"
 
 #: .\netbox_inventory\filtersets.py:664
 msgid "Assigned Audit Flow (ID)"
@@ -31,6 +63,107 @@ msgstr ""
 msgid "Source (slug)"
 msgstr ""
 
+#: .\netbox_inventory\forms\assign.py:25
+msgid "Asset name"
+msgstr "资产名称"
+
+#: .\netbox_inventory\forms\bulk_edit.py:66
+#: .\netbox_inventory\forms\filters.py:156
+#: .\netbox_inventory\forms\models.py:118 .\netbox_inventory\tables.py:129
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:27
+msgid "Manufacturer"
+msgstr "制造商"
+
+#: .\netbox_inventory\forms\bulk_edit.py:71
+#: .\netbox_inventory\forms\models.py:61
+#: .\netbox_inventory\forms\reassign.py:193
+#: .\netbox_inventory\models\assets.py:84 .\netbox_inventory\tables.py:138
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:48
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:27
+msgid "Inventory Item Group"
+msgstr "库存项分组"
+
+#: .\netbox_inventory\forms\bulk_edit.py:113
+#: .\netbox_inventory\forms\filters.py:164
+#: .\netbox_inventory\forms\models.py:126
+msgid "Device type"
+msgstr "设备类型"
+
+#: .\netbox_inventory\forms\bulk_edit.py:123
+#: .\netbox_inventory\forms\filters.py:177
+#: .\netbox_inventory\forms\models.py:134
+msgid "Module type"
+msgstr "模块类型"
+
+#: .\netbox_inventory\forms\bulk_edit.py:133
+#: .\netbox_inventory\forms\filters.py:203
+#: .\netbox_inventory\forms\models.py:150
+msgid "Rack type"
+msgstr "机柜类型"
+
+#: .\netbox_inventory\forms\bulk_edit.py:156
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:171
+msgid "Warranty start"
+msgstr "保修起始日期"
+
+#: .\netbox_inventory\forms\bulk_edit.py:161
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:175
+msgid "Warranty end"
+msgstr "保修结束日期"
+
+#: .\netbox_inventory\forms\bulk_edit.py:174
+#: .\netbox_inventory\forms\bulk_edit.py:323
+#: .\netbox_inventory\forms\filters.py:225
+#: .\netbox_inventory\forms\filters.py:384
+#: .\netbox_inventory\forms\filters.py:457
+#: .\netbox_inventory\forms\models.py:181
+#: .\netbox_inventory\forms\models.py:377
+msgid "Contact Group"
+msgstr "联系人组"
+
+#: .\netbox_inventory\forms\bulk_edit.py:276
+#: .\netbox_inventory\forms\bulk_edit.py:310
+#: .\netbox_inventory\models\deliveries.py:56
+#: .\netbox_inventory\models\deliveries.py:96
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:40
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:34
+msgid "Date"
+msgstr "日期"
+
+#: .\netbox_inventory\forms\bulk_edit.py:283
+#: .\netbox_inventory\forms\filters.py:257
+#: .\netbox_inventory\forms\filters.py:409
+#: .\netbox_inventory\forms\filters.py:451
+#: .\netbox_inventory\models\deliveries.py:29
+#: .\netbox_inventory\models\deliveries.py:44
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:26
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:21
+msgid "Supplier"
+msgstr "供应商"
+
+#: .\netbox_inventory\forms\bulk_edit.py:317
+#: .\netbox_inventory\forms\filters.py:252
+#: .\netbox_inventory\forms\filters.py:446
+#: .\netbox_inventory\forms\models.py:162
+#: .\netbox_inventory\models\assets.py:287
+#: .\netbox_inventory\models\deliveries.py:65
+#: .\netbox_inventory\models\deliveries.py:90
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:156
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:163
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:71
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:27
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:42
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:19
+msgid "Purchase"
+msgstr "合同"
+
+#: .\netbox_inventory\forms\bulk_edit.py:329
+#: .\netbox_inventory\forms\models.py:386
+#: .\netbox_inventory\models\deliveries.py:105
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:31
+msgid "Receiving Contact"
+msgstr "订单联系人"
+
 #: .\netbox_inventory\forms\bulk_edit.py:375
 #: .\netbox_inventory\forms\bulk_edit.py:392
 msgid "Attributes"
@@ -38,18 +171,147 @@ msgstr ""
 
 #: .\netbox_inventory\forms\bulk_import.py:517
 #: .\netbox_inventory\forms\bulk_import.py:542
-#: .\netbox_inventory\tables.py:573
+#: .\netbox_inventory\tables.py:582
 #: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:20
 msgid "Object Type"
-msgstr ""
+msgstr "对象类型"
 
 #: .\netbox_inventory\forms\bulk_import.py:567
 msgid "Source slug of this audit trail."
 msgstr ""
 
+#: .\netbox_inventory\forms\filters.py:169
+msgid "Device role"
+msgstr "设备角色"
+
+#: .\netbox_inventory\forms\filters.py:185
+#: .\netbox_inventory\forms\models.py:142
+msgid "Inventory item type"
+msgstr "库存项类别"
+
+#: .\netbox_inventory\forms\filters.py:190
+#: .\netbox_inventory\forms\models.py:77
+msgid "Inventory item group"
+msgstr "库存项分组"
+
+#: .\netbox_inventory\forms\filters.py:195
+msgid "Inventory item role"
+msgstr "库存项角色"
+
+#: .\netbox_inventory\forms\filters.py:208
+msgid "Rack role"
+msgstr "机柜角色"
+
+#: .\netbox_inventory\forms\filters.py:212
+msgid "Is assigned to hardware"
+msgstr "已关联硬件"
+
+#: .\netbox_inventory\forms\filters.py:219
+#: .\netbox_inventory\forms\models.py:175
+#: .\netbox_inventory\models\assets.py:237
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:98
+msgid "Tenant"
+msgstr "租户"
+
+#: .\netbox_inventory\forms\filters.py:234
+#: .\netbox_inventory\forms\filters.py:393
+#: .\netbox_inventory\forms\models.py:191
+#: .\netbox_inventory\models\assets.py:246
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:107
+msgid "Contact"
+msgstr "联系人"
+
+#: .\netbox_inventory\forms\filters.py:240
+#: .\netbox_inventory\forms\models.py:156
+#: .\netbox_inventory\models\assets.py:269
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:159
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:38
+msgid "Owner"
+msgstr "所有者"
+
+#: .\netbox_inventory\forms\filters.py:246
+#: .\netbox_inventory\forms\models.py:168
+#: .\netbox_inventory\models\assets.py:278
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:167
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:20
+msgid "Delivery"
+msgstr "订单"
+
+#: .\netbox_inventory\forms\filters.py:261
+#: .\netbox_inventory\forms\filters.py:469
+msgid "Delivered on or after"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:266
+#: .\netbox_inventory\forms\filters.py:474
+msgid "Delivered on or before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:271
+#: .\netbox_inventory\forms\filters.py:417
+msgid "Purchased on or after"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:276
+#: .\netbox_inventory\forms\filters.py:422
+msgid "Purchased on or before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:281
+msgid "Warranty starts on or after"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:286
+msgid "Warranty starts on or before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:291
+msgid "Warranty ends on or after"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:296
+msgid "Warranty ends on or before"
+msgstr ""
+
+#: .\netbox_inventory\forms\filters.py:302
+msgid "Storage site"
+msgstr "库存站点"
+
+#: .\netbox_inventory\forms\filters.py:312
+msgid "Storage location"
+msgstr "库存位置"
+
+#: .\netbox_inventory\forms\filters.py:318
+msgid "Installed at site"
+msgstr "安装站点"
+
+#: .\netbox_inventory\forms\filters.py:327
+msgid "Installed at location"
+msgstr "安装位置"
+
+#: .\netbox_inventory\forms\filters.py:337
+msgid "Installed in rack"
+msgstr "安装机柜"
+
+#: .\netbox_inventory\forms\filters.py:348
+msgid "Installed in device"
+msgstr "安装设备"
+
+#: .\netbox_inventory\forms\filters.py:353
+msgid "Located at site"
+msgstr "定位站点"
+
+#: .\netbox_inventory\forms\filters.py:362
+msgid "Located at location"
+msgstr "定位位置"
+
+#: .\netbox_inventory\forms\filters.py:465
+msgid "Receiving contact"
+msgstr "订单联系人"
+
 #: .\netbox_inventory\forms\filters.py:493
 msgid "Object type"
-msgstr ""
+msgstr "对象类型"
 
 #: .\netbox_inventory\forms\filters.py:501
 msgid "Audit flow"
@@ -63,23 +325,63 @@ msgstr ""
 msgid "Before"
 msgstr ""
 
-#: .\netbox_inventory\forms\filters.py:558 .\netbox_inventory\tables.py:670
+#: .\netbox_inventory\forms\filters.py:558 .\netbox_inventory\tables.py:679
 msgid "Time"
 msgstr "时间"
 
-#: .\netbox_inventory\forms\models.py:427
+#: .\netbox_inventory\forms\models.py:45
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:34
+msgid "Parent"
+msgstr "上级"
+
+#: .\netbox_inventory\forms\models.py:62 .\netbox_inventory\navigation.py:74
+msgid "Inventory Item Groups"
+msgstr "库存项分组"
+
+#: .\netbox_inventory\forms\models.py:182
+msgid "Filter contacts by group"
+msgstr "用联系人组过滤订单联系人"
+
+#: .\netbox_inventory\forms\models.py:199
+msgid "Storage Site"
+msgstr "库存站点"
+
+#: .\netbox_inventory\forms\models.py:208
+#: .\netbox_inventory\models\assets.py:256
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:62
+msgid "Storage Location"
+msgstr "库存位置"
+
+#: .\netbox_inventory\forms\models.py:378
+msgid "Filter receiving contacts by group"
+msgstr "用联系人组过滤订单联系人"
+
+#: .\netbox_inventory\forms\models.py:441
 msgid ""
 "Enter object filter in <a href=\"https://json.org/\">JSON</a> format, "
 "mapping attributes to values."
 msgstr ""
 
-#: .\netbox_inventory\forms\models.py:442
-#: .\netbox_inventory\forms\models.py:480
+#: .\netbox_inventory\forms\models.py:456
+#: .\netbox_inventory\forms\models.py:494
 msgid "Assignment"
-msgstr "分配"
+msgstr "分配情况"
+
+#: .\netbox_inventory\forms\reassign.py:47
+#: .\netbox_inventory\models\deliveries.py:50 .\netbox_inventory\tables.py:470
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:39
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:34
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:57
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:30
+msgid "Status"
+msgstr "状态"
 
 #: .\netbox_inventory\forms\reassign.py:53
+#: .\netbox_inventory\forms\reassign.py:155
+#: .\netbox_inventory\forms\reassign.py:175
+#: .\netbox_inventory\forms\reassign.py:221
 #: .\netbox_inventory\forms\reassign.py:233
+#: .\netbox_inventory\forms\reassign.py:258
 msgid "New Asset"
 msgstr "新的资产"
 
@@ -88,169 +390,166 @@ msgstr "新的资产"
 msgid "Old Asset"
 msgstr "原有资产"
 
-#: .\netbox_inventory\models\assets.py:42
+#: .\netbox_inventory\forms\reassign.py:203
+#: .\netbox_inventory\models\assets.py:184
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:83
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:24
+msgid "Inventory Item Type"
+msgstr "库存项类别"
+
+#: .\netbox_inventory\models\assets.py:35
+#: .\netbox_inventory\models\assets.py:36
+msgid "InventoryItemGroup"
+msgstr "库存项分组"
+
+#: .\netbox_inventory\models\assets.py:46
 msgid "A top-level group with this name already exists."
 msgstr ""
 
-#: .\netbox_inventory\models\assets.py:59
+#: .\netbox_inventory\models\assets.py:63
 msgid "manufacturer"
 msgstr "制造商"
 
-#: .\netbox_inventory\models\assets.py:63
+#: .\netbox_inventory\models\assets.py:67
 msgid "model"
 msgstr "型号"
 
-#: .\netbox_inventory\models\assets.py:72
+#: .\netbox_inventory\models\assets.py:76
 msgid "Part Number"
 msgstr "零件编号"
 
-#: .\netbox_inventory\models\assets.py:80 .\netbox_inventory\tables.py:136
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:48
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:27
-msgid "Inventory Item Group"
-msgstr "库存项分组"
+#: .\netbox_inventory\models\assets.py:94
+#: .\netbox_inventory\models\assets.py:95
+msgid "InventoryItemType"
+msgstr "库存项类别"
 
-#: .\netbox_inventory\models\assets.py:117
+#: .\netbox_inventory\models\assets.py:125
 msgid "Can be used to quickly identify a particular asset"
-msgstr ""
+msgstr "可用于快速识别特定资产"
 
-#: .\netbox_inventory\models\assets.py:122
+#: .\netbox_inventory\models\assets.py:130
 #: .\netbox_inventory\models\mixins.py:14
 msgid "name"
 msgstr "名称"
 
-#: .\netbox_inventory\models\assets.py:130
+#: .\netbox_inventory\models\assets.py:133
+msgid "Identifier assigned by owner"
+msgstr "所有者分配的标识符"
+
+#: .\netbox_inventory\models\assets.py:138
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:31
 msgid "Asset Tag"
 msgstr "资产标签"
 
-#: .\netbox_inventory\models\assets.py:135
+#: .\netbox_inventory\models\assets.py:141
+msgid "Identifier assigned by manufacturer"
+msgstr "制造商分配的标识符"
+
+#: .\netbox_inventory\models\assets.py:143
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:35
 msgid "Serial Number"
 msgstr "序列号"
 
-#: .\netbox_inventory\models\assets.py:147
+#: .\netbox_inventory\models\assets.py:155
 msgid "Asset lifecycle status"
-msgstr ""
+msgstr "资产生命周期状态"
 
-#: .\netbox_inventory\models\assets.py:148
+#: .\netbox_inventory\models\assets.py:156
 msgid "status"
 msgstr "状态"
 
-#: .\netbox_inventory\models\assets.py:160
+#: .\netbox_inventory\models\assets.py:168
 msgid "Device Type"
 msgstr "设备类型"
 
-#: .\netbox_inventory\models\assets.py:168
+#: .\netbox_inventory\models\assets.py:176
 msgid "Module Type"
 msgstr "模块类型"
 
-#: .\netbox_inventory\models\assets.py:176
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:83
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:24
-#, fuzzy
-#| msgid "Inventory Item Types"
-msgid "Inventory Item Type"
-msgstr "库存项类别"
-
-#: .\netbox_inventory\models\assets.py:184
+#: .\netbox_inventory\models\assets.py:192
 msgid "Rack Type"
 msgstr "机柜类型"
 
-#: .\netbox_inventory\models\assets.py:196
-#: .\netbox_inventory\template_content.py:157
+#: .\netbox_inventory\models\assets.py:204
+#: .\netbox_inventory\template_content.py:159
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:146
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:33
 msgid "Device"
 msgstr "设备"
 
-#: .\netbox_inventory\models\assets.py:204
-#: .\netbox_inventory\template_content.py:163
+#: .\netbox_inventory\models\assets.py:212
+#: .\netbox_inventory\template_content.py:165
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:38
 msgid "Module"
 msgstr "模块"
 
-#: .\netbox_inventory\models\assets.py:212
-#: .\netbox_inventory\template_content.py:169
+#: .\netbox_inventory\models\assets.py:220
+#: .\netbox_inventory\template_content.py:171
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:43
 msgid "Inventory Item"
 msgstr "库存项"
 
-#: .\netbox_inventory\models\assets.py:220
+#: .\netbox_inventory\models\assets.py:228
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:142
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:48
 msgid "Rack"
 msgstr "机柜"
 
-#: .\netbox_inventory\models\assets.py:223
+#: .\netbox_inventory\models\assets.py:231
 msgid "Tenant using this asset"
-msgstr ""
+msgstr "使用此资产的租户"
 
-#: .\netbox_inventory\models\assets.py:229
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:98
-msgid "Tenant"
-msgstr "租户"
+#: .\netbox_inventory\models\assets.py:240
+msgid "Contact using this asset"
+msgstr "使用此资产的联系人"
 
-#: .\netbox_inventory\models\assets.py:238
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:107
-msgid "Contact"
-msgstr ""
+#: .\netbox_inventory\models\assets.py:250
+msgid "Where is this asset stored when not in use"
+msgstr "资产未使用时的库存地点"
 
-#: .\netbox_inventory\models\assets.py:248
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:62
-msgid "Storage Location"
-msgstr "库存位置"
-
-#: .\netbox_inventory\models\assets.py:255
+#: .\netbox_inventory\models\assets.py:263
 msgid "Who owns this asset"
-msgstr ""
+msgstr "资产的所有者"
 
-#: .\netbox_inventory\models\assets.py:261
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:159
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:37
-msgid "Owner"
-msgstr "所有者"
-
-#: .\netbox_inventory\models\assets.py:264
+#: .\netbox_inventory\models\assets.py:272
 msgid "Delivery this asset was part of"
-msgstr ""
+msgstr "此资产所属的订单信息"
 
-#: .\netbox_inventory\models\assets.py:270
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:167
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:20
-msgid "Delivery"
-msgstr "订单"
-
-#: .\netbox_inventory\models\assets.py:273
+#: .\netbox_inventory\models\assets.py:281
 msgid "Purchase through which this asset was purchased"
-msgstr ""
+msgstr "购买此资产的合同信息"
 
-#: .\netbox_inventory\models\assets.py:279
-#: .\netbox_inventory\models\deliveries.py:80
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:156
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:163
-#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:71
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:27
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:41
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:19
-msgid "Purchase"
-msgstr "合同"
-
-#: .\netbox_inventory\models\assets.py:282
+#: .\netbox_inventory\models\assets.py:290
 msgid "First date warranty for this asset is valid"
-msgstr ""
+msgstr "该资产的首次保修有效期"
 
-#: .\netbox_inventory\models\assets.py:285
+#: .\netbox_inventory\models\assets.py:293
 msgid "Warranty Start"
 msgstr "保修起始日期"
 
-#: .\netbox_inventory\models\assets.py:288
+#: .\netbox_inventory\models\assets.py:296
 msgid "Last date warranty for this asset is valid"
 msgstr "该资产保修的有效截止日期"
 
-#: .\netbox_inventory\models\assets.py:291
+#: .\netbox_inventory\models\assets.py:299
 msgid "Warranty End"
 msgstr "保修结束日期"
+
+#: .\netbox_inventory\models\assets.py:596
+#: .\netbox_inventory\models\assets.py:597 .\netbox_inventory\navigation.py:62
+#: .\netbox_inventory\tables.py:39 .\netbox_inventory\tables.py:84
+#: .\netbox_inventory\tables.py:434 .\netbox_inventory\tables.py:480
+#: .\netbox_inventory\tables.py:536 .\netbox_inventory\tables.py:732
+#: .\netbox_inventory\tables.py:742 .\netbox_inventory\tables.py:752
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:48
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_stats_counts.html:6
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:42
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:135
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:47
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:48
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:44
+msgid "Assets"
+msgstr "资产"
 
 #: .\netbox_inventory\models\audit.py:67
 msgid "Filter must be defined as a dictionary mapping attributes to values."
@@ -323,47 +622,62 @@ msgstr ""
 msgid "audit trails"
 msgstr ""
 
-#: .\netbox_inventory\models\deliveries.py:33
+#: .\netbox_inventory\models\deliveries.py:28
+#: .\netbox_inventory\navigation.py:133
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:6
+msgid "Suppliers"
+msgstr "供应商"
+
+#: .\netbox_inventory\models\deliveries.py:36
+#: .\netbox_inventory\models\deliveries.py:82 .\netbox_inventory\tables.py:531
+#: .\netbox_inventory\templates\netbox_inventory\asset.html:23
+#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:12
+#: .\netbox_inventory\templates\netbox_inventory\delivery.html:23
+#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:12
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:30
+#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:30
+#: .\netbox_inventory\templates\netbox_inventory\purchase.html:22
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:24
+msgid "Name"
+msgstr "名称"
+
+#: .\netbox_inventory\models\deliveries.py:38
 msgid "Legal entity this purchase was made at"
 msgstr ""
 
-#: .\netbox_inventory\models\deliveries.py:39
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:26
-#: .\netbox_inventory\templates\netbox_inventory\supplier.html:21
-msgid "Supplier"
-msgstr "供应商"
-
-#: .\netbox_inventory\models\deliveries.py:44
+#: .\netbox_inventory\models\deliveries.py:49
 msgid "Status of purchase"
 msgstr ""
 
-#: .\netbox_inventory\models\deliveries.py:47
+#: .\netbox_inventory\models\deliveries.py:53
 msgid "Date when this purchase was made"
 msgstr ""
 
-#: .\netbox_inventory\models\deliveries.py:50
-#: .\netbox_inventory\models\deliveries.py:86
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:40
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:34
-msgid "Date"
-msgstr "日期"
+#: .\netbox_inventory\models\deliveries.py:64
+#: .\netbox_inventory\navigation.py:139 .\netbox_inventory\tables.py:424
+#: .\netbox_inventory\templates\netbox_inventory\supplier.html:32
+msgid "Purchases"
+msgstr "合同"
 
-#: .\netbox_inventory\models\deliveries.py:74
+#: .\netbox_inventory\models\deliveries.py:84
 msgid "Purchase that this delivery is part of"
-msgstr ""
+msgstr "订单所属的合同"
 
-#: .\netbox_inventory\models\deliveries.py:83
+#: .\netbox_inventory\models\deliveries.py:93
 msgid "Date when this delivery was made"
-msgstr ""
+msgstr "订单签订日期"
 
-#: .\netbox_inventory\models\deliveries.py:89
+#: .\netbox_inventory\models\deliveries.py:99
 msgid "Contact that accepted this delivery"
-msgstr ""
+msgstr "此订单的联系人"
 
-#: .\netbox_inventory\models\deliveries.py:95
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:31
-msgid "Receiving Contact"
-msgstr ""
+#: .\netbox_inventory\models\deliveries.py:114
+msgid "delivery"
+msgstr "订单"
+
+#: .\netbox_inventory\models\deliveries.py:115
+msgid "deliveries"
+msgstr "订单"
 
 #: .\netbox_inventory\models\mixins.py:19
 msgid "description"
@@ -371,7 +685,7 @@ msgstr "描述"
 
 #: .\netbox_inventory\models\mixins.py:24
 msgid "comments"
-msgstr ""
+msgstr "备注"
 
 #: .\netbox_inventory\navigation.py:17 .\netbox_inventory\navigation.py:32
 #: .\netbox_inventory\navigation.py:47 .\netbox_inventory\navigation.py:88
@@ -391,40 +705,12 @@ msgstr "新增"
 msgid "Import"
 msgstr "导入"
 
-#: .\netbox_inventory\navigation.py:62 .\netbox_inventory\tables.py:39
-#: .\netbox_inventory\tables.py:84 .\netbox_inventory\tables.py:427
-#: .\netbox_inventory\tables.py:472 .\netbox_inventory\tables.py:527
-#: .\netbox_inventory\tables.py:723 .\netbox_inventory\tables.py:733
-#: .\netbox_inventory\tables.py:743
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:48
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_stats_counts.html:5
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:42
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:135
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:47
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:48
-#: .\netbox_inventory\templates\netbox_inventory\supplier.html:44
-msgid "Assets"
-msgstr "资产"
-
 #: .\netbox_inventory\navigation.py:68 .\netbox_inventory\tables.py:44
 msgid "Inventory Item Types"
 msgstr "库存项类别"
 
-#: .\netbox_inventory\navigation.py:74
-msgid "Inventory Item Groups"
-msgstr "库存项分组"
-
-#: .\netbox_inventory\navigation.py:133
-msgid "Suppliers"
-msgstr "供应商"
-
-#: .\netbox_inventory\navigation.py:139 .\netbox_inventory\tables.py:417
-#: .\netbox_inventory\templates\netbox_inventory\supplier.html:32
-msgid "Purchases"
-msgstr "合同"
-
 #: .\netbox_inventory\navigation.py:145 .\netbox_inventory\navigation.py:239
-#: .\netbox_inventory\tables.py:422 .\netbox_inventory\tables.py:467
+#: .\netbox_inventory\tables.py:429 .\netbox_inventory\tables.py:475
 #: .\netbox_inventory\templates\netbox_inventory\purchase.html:42
 #: .\netbox_inventory\templates\netbox_inventory\purchase.html:68
 #: .\netbox_inventory\templates\netbox_inventory\supplier.html:38
@@ -448,8 +734,8 @@ msgid "Audit Trail Sources"
 msgstr ""
 
 #: .\netbox_inventory\navigation.py:236
-msgid "Inventory"
-msgstr "资产清单"
+msgid "Inventory Management"
+msgstr "资产管理"
 
 #: .\netbox_inventory\navigation.py:238
 msgid "Asset Management"
@@ -462,107 +748,113 @@ msgstr "资产管理"
 msgid "Audit"
 msgstr ""
 
-#: .\netbox_inventory\tables.py:131
+#: .\netbox_inventory\tables.py:124
+msgid "Kind"
+msgstr "类别"
+
+#: .\netbox_inventory\tables.py:133
 msgid "Hardware Type"
 msgstr "硬件类型"
 
-#: .\netbox_inventory\tables.py:146
+#: .\netbox_inventory\tables.py:144
+#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:25
+msgid "Hardware"
+msgstr "硬件"
+
+#: .\netbox_inventory\tables.py:149
 msgid "Hardware Role"
 msgstr "硬件角色"
 
-#: .\netbox_inventory\tables.py:150
+#: .\netbox_inventory\tables.py:153
 msgid "Installed Site"
 msgstr "安装站点"
 
-#: .\netbox_inventory\tables.py:154
+#: .\netbox_inventory\tables.py:157
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:122
 msgid "Installed Location"
 msgstr "安装位置"
 
-#: .\netbox_inventory\tables.py:158
+#: .\netbox_inventory\tables.py:161
 msgid "Installed Rack"
 msgstr "安装机柜"
 
-#: .\netbox_inventory\tables.py:162
+#: .\netbox_inventory\tables.py:165
 msgid "Installed Device"
 msgstr "安装设备"
 
-#: .\netbox_inventory\tables.py:188 .\netbox_inventory\tables.py:516
+#: .\netbox_inventory\tables.py:191 .\netbox_inventory\tables.py:524
 msgid "Purchase Date"
 msgstr "合同日期"
 
-#: .\netbox_inventory\tables.py:192 .\netbox_inventory\tables.py:512
+#: .\netbox_inventory\tables.py:195 .\netbox_inventory\tables.py:520
 msgid "Delivery Date"
 msgstr "订单日期"
 
-#: .\netbox_inventory\tables.py:196
+#: .\netbox_inventory\tables.py:199
 msgid "Current Site"
 msgstr "当前站点"
 
-#: .\netbox_inventory\tables.py:201
+#: .\netbox_inventory\tables.py:204
 msgid "Current Location"
 msgstr "当前位置"
 
-#: .\netbox_inventory\tables.py:208
+#: .\netbox_inventory\tables.py:211
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:179
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:45
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:46
 msgid "Warranty remaining"
 msgstr "保修剩余时间"
 
-#: .\netbox_inventory\tables.py:662
-msgid "Object"
-msgstr ""
+#: .\netbox_inventory\tables.py:216
+msgid "Create hardware from asset"
+msgstr "依据此资产新建一个硬件"
 
-#: .\netbox_inventory\tables.py:680
+#: .\netbox_inventory\tables.py:217
+msgid "Edit hardware assignment"
+msgstr "资产分配"
+
+#: .\netbox_inventory\tables.py:671
+msgid "Object"
+msgstr "对象"
+
+#: .\netbox_inventory\tables.py:689
 msgid "Auditor"
 msgstr ""
 
-#: .\netbox_inventory\tables.py:686
+#: .\netbox_inventory\tables.py:695
 msgid "Auditor Name"
 msgstr ""
 
-#: .\netbox_inventory\template_content.py:92
-#: .\netbox_inventory\template_content.py:208
+#: .\netbox_inventory\template_content.py:17
+msgid "Expired"
+msgstr "已过期"
+
+#: .\netbox_inventory\template_content.py:94
+#: .\netbox_inventory\template_content.py:210
 msgid "Installed"
 msgstr "已安装"
 
-#: .\netbox_inventory\template_content.py:97
+#: .\netbox_inventory\template_content.py:99
 msgid "Stored"
-msgstr "存储"
+msgstr "库存"
 
-#: .\netbox_inventory\template_content.py:102
-#: .\netbox_inventory\template_content.py:175
+#: .\netbox_inventory\template_content.py:104
+#: .\netbox_inventory\template_content.py:177
 msgid "Total"
 msgstr "总计"
 
-#: .\netbox_inventory\template_content.py:228
-#: .\netbox_inventory\template_content.py:257
+#: .\netbox_inventory\template_content.py:230
+#: .\netbox_inventory\template_content.py:259
 msgid "Assigned"
 msgstr "已分配"
 
-#: .\netbox_inventory\template_content.py:235
-#, fuzzy
-#| msgid "Owner"
+#: .\netbox_inventory\template_content.py:237
 msgid "Owned"
 msgstr "所有者"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:20
 #: .\netbox_inventory\templates\netbox_inventory\asset_reassign.html:9
-#, fuzzy
-#| msgid "Assets"
 msgid "Asset"
 msgstr "资产"
-
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:23
-#: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:12
-#: .\netbox_inventory\templates\netbox_inventory\delivery.html:23
-#: .\netbox_inventory\templates\netbox_inventory\generic\baseflow.html:12
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:29
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:30
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:22
-#: .\netbox_inventory\templates\netbox_inventory\supplier.html:24
-msgid "Name"
-msgstr "名称"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:27
 #: .\netbox_inventory\templates\netbox_inventory\audittrailsource.html:16
@@ -575,15 +867,6 @@ msgstr "名称"
 msgid "Description"
 msgstr "描述"
 
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:39
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:33
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:57
-#: .\netbox_inventory\templates\netbox_inventory\purchase.html:30
-#, fuzzy
-#| msgid "status"
-msgid "Status"
-msgstr "状态"
-
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:43
 msgid "Type"
 msgstr "类型"
@@ -594,14 +877,15 @@ msgstr "分配到"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:80
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:84
-#: .\netbox_inventory\templates\netbox_inventory\asset_create.html:8
+#: .\netbox_inventory\templates\netbox_inventory\asset_create.html:9
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_edit_header.html:11
 msgid "Create"
 msgstr "创建"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:91
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:21
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:22
 msgid "Edit Assignment"
-msgstr "编辑资产分配内容"
+msgstr "资产分配"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:125
 msgid "Site"
@@ -612,19 +896,11 @@ msgstr "站点"
 msgid "Location"
 msgstr "位置"
 
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:171
-#, fuzzy
-#| msgid "Warranty Start"
-msgid "Warranty start"
-msgstr "保修起始日期"
+#: .\netbox_inventory\templates\netbox_inventory\asset_assign.html:4
+msgid "Assign"
+msgstr "分配"
 
-#: .\netbox_inventory\templates\netbox_inventory\asset.html:175
-#, fuzzy
-#| msgid "Warranty End"
-msgid "Warranty end"
-msgstr "保修结束日期"
-
-#: .\netbox_inventory\templates\netbox_inventory\asset_assign.html:9
+#: .\netbox_inventory\templates\netbox_inventory\asset_assign.html:10
 msgid "Assign Asset"
 msgstr "分配资产"
 
@@ -632,17 +908,13 @@ msgstr "分配资产"
 msgid "General"
 msgstr "基本信息"
 
-#: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:25
-msgid "Hardware"
-msgstr "硬件"
-
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:82
 msgid "Assigned to"
 msgstr "分配到"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:100
 msgid "Custom Fields"
-msgstr ""
+msgstr "自定义字段"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset_edit.html:107
 msgid "Comments"
@@ -650,7 +922,7 @@ msgstr "备注"
 
 #: .\netbox_inventory\templates\netbox_inventory\asset_reassign.html:16
 msgid "Select a different asset to assign to"
-msgstr ""
+msgstr "选择另外一项资产关联"
 
 #: .\netbox_inventory\templates\netbox_inventory\auditflow.html:5
 msgid "Audit Flow"
@@ -678,7 +950,7 @@ msgstr ""
 
 #: .\netbox_inventory\templates\netbox_inventory\delivery.html:68
 msgid "Delivered Assets"
-msgstr ""
+msgstr "订单中的资产"
 
 #: .\netbox_inventory\templates\netbox_inventory\delivery.html:72
 #: .\netbox_inventory\templates\netbox_inventory\purchase.html:85
@@ -693,7 +965,11 @@ msgstr ""
 msgid "No filter defined"
 msgstr ""
 
-#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:52
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_edit_header.html:20
+msgid "Bulk Create"
+msgstr "批量创建"
+
+#: .\netbox_inventory\templates\netbox_inventory\inc\asset_info.html:53
 msgid "None assigned"
 msgstr "未分配"
 
@@ -701,19 +977,13 @@ msgstr "未分配"
 msgid "Add inventory item type"
 msgstr "添加库存项类别"
 
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:34
-#, fuzzy
-#| msgid "parent"
-msgid "Parent"
-msgstr "上级"
-
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:53
 msgid "Asset count by status"
-msgstr ""
+msgstr "按状态统计资产数"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:58
 msgid "Count"
-msgstr ""
+msgstr "数量"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:72
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:106
@@ -722,7 +992,7 @@ msgstr "未找到资产"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:79
 msgid "Asset count by type & status"
-msgstr ""
+msgstr "按类型状态统计资产数"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:84
 msgid "Status - Count"
@@ -740,21 +1010,11 @@ msgstr "添加库存项分组"
 msgid "Add asset"
 msgstr "添加资产"
 
-#: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:27
-#, fuzzy
-#| msgid "manufacturer"
-msgid "Manufacturer"
-msgstr "制造商"
-
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:31
-#, fuzzy
-#| msgid "model"
 msgid "Model"
 msgstr "型号"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:35
-#, fuzzy
-#| msgid "Part Number"
 msgid "Part number"
 msgstr "零件编号"
 
@@ -768,7 +1028,7 @@ msgstr "新增订单"
 
 #: .\netbox_inventory\templates\netbox_inventory\purchase.html:81
 msgid "Purchased Assets"
-msgstr ""
+msgstr "合同中的资产"
 
 #: .\netbox_inventory\templates\netbox_inventory\supplier.html:12
 msgid "Add purchase"
@@ -805,6 +1065,24 @@ msgstr ""
 #: .\netbox_inventory\views\audittrailsource.py:31
 msgid "Trails"
 msgstr ""
+
+#~ msgid "device"
+#~ msgstr "设备"
+
+#~ msgid "module"
+#~ msgstr "模块"
+
+#~ msgid "inventoryitem"
+#~ msgstr "库存项"
+
+#~ msgid "rack"
+#~ msgstr "机柜"
+
+#~ msgid "Inventory item"
+#~ msgstr "库存项"
+
+#~ msgid "Inventory"
+#~ msgstr "资产库存管理"
 
 #~ msgid "NetBox Inventory"
 #~ msgstr "资产库存管理"

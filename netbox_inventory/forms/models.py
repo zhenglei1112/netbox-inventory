@@ -42,7 +42,7 @@ class InventoryItemGroupForm(NetBoxModelForm):
     parent = DynamicModelChoiceField(
         queryset=InventoryItemGroup.objects.all(),
         required=False,
-        label='Parent',
+        label=_('Parent'),
     )
     comments = CommentField()
 
@@ -58,6 +58,8 @@ class InventoryItemGroupForm(NetBoxModelForm):
 
     class Meta:
         model = InventoryItemGroup
+        verbose_name = _('Inventory Item Group')
+        verbose_name_plural = _('Inventory Item Groups')
         fields = (
             'name',
             'parent',
@@ -72,7 +74,7 @@ class InventoryItemTypeForm(NetBoxModelForm):
     inventoryitem_group = DynamicModelChoiceField(
         queryset=InventoryItemGroup.objects.all(),
         required=False,
-        label='Inventory item group',
+        label=_('Inventory item group'),
     )
     comments = CommentField()
 
@@ -113,6 +115,7 @@ class AssetForm(NetBoxModelForm):
             'inventoryitem_types': '$inventoryitem_type',
             'rack_types': '$rack_type',
         },
+        label=_('Manufacturer'),
     )
     device_type = DynamicModelChoiceField(
         queryset=DeviceType.objects.all(),
@@ -120,6 +123,7 @@ class AssetForm(NetBoxModelForm):
         query_params={
             'manufacturer_id': '$manufacturer',
         },
+        label=_('Device type'),
     )
     module_type = DynamicModelChoiceField(
         queryset=ModuleType.objects.all(),
@@ -127,6 +131,7 @@ class AssetForm(NetBoxModelForm):
         query_params={
             'manufacturer_id': '$manufacturer',
         },
+        label=_('Module type'),
     )
     inventoryitem_type = DynamicModelChoiceField(
         queryset=InventoryItemType.objects.all(),
@@ -134,7 +139,7 @@ class AssetForm(NetBoxModelForm):
         query_params={
             'manufacturer_id': '$manufacturer',
         },
-        label='Inventory item type',
+        label=_('Inventory item type'),
     )
     rack_type = DynamicModelChoiceField(
         queryset=RackType.objects.all(),
@@ -142,34 +147,39 @@ class AssetForm(NetBoxModelForm):
         query_params={
             'manufacturer_id': '$manufacturer',
         },
+        label=_('Rack type'),
     )
     owner = DynamicModelChoiceField(
         queryset=Tenant.objects.all(),
         help_text=Asset._meta.get_field('owner').help_text,
         required=not Asset._meta.get_field('owner').blank,
+        label=_('Owner'),
     )
     purchase = DynamicModelChoiceField(
         queryset=Purchase.objects.all(),
         help_text=Asset._meta.get_field('purchase').help_text,
         required=not Asset._meta.get_field('purchase').blank,
+        label=_('Purchase'),
     )
     delivery = DynamicModelChoiceField(
         queryset=Delivery.objects.all(),
         help_text=Asset._meta.get_field('delivery').help_text,
         required=not Asset._meta.get_field('delivery').blank,
+        label=_('Delivery'),
         query_params={'purchase_id': '$purchase'},
     )
     tenant = DynamicModelChoiceField(
         queryset=Tenant.objects.all(),
         help_text=Asset._meta.get_field('tenant').help_text,
         required=not Asset._meta.get_field('tenant').blank,
+        label=_('Tenant'),
     )
     contact_group = DynamicModelChoiceField(
         queryset=ContactGroup.objects.all(),
         required=False,
         null_option='None',
-        label='Contact Group',
-        help_text='Filter contacts by group',
+        label=_('Contact Group'),
+        help_text=_('Filter contacts by group'),
         initial_params={
             'contact': '$contact',
         },
@@ -178,6 +188,7 @@ class AssetForm(NetBoxModelForm):
         queryset=Contact.objects.all(),
         help_text=Asset._meta.get_field('contact').help_text,
         required=not Asset._meta.get_field('contact').blank,
+        label=_('Contact'),
         query_params={
             'group_id': '$contact_group',
         },
@@ -185,6 +196,7 @@ class AssetForm(NetBoxModelForm):
     storage_site = DynamicModelChoiceField(
         queryset=Site.objects.all(),
         required=False,
+        label=_('Storage Site'),
         initial_params={
             'locations': '$storage_location',
         },
@@ -193,6 +205,7 @@ class AssetForm(NetBoxModelForm):
         queryset=Location.objects.all(),
         help_text=Asset._meta.get_field('storage_location').help_text,
         required=False,
+        label=_('Storage Location'),
         query_params={
             'site_id': '$storage_site',
         },
@@ -361,8 +374,8 @@ class DeliveryForm(NetBoxModelForm):
         queryset=ContactGroup.objects.all(),
         required=False,
         null_option='None',
-        label='Contact Group',
-        help_text='Filter receiving contacts by group',
+        label=_('Contact Group'),
+        help_text=_('Filter receiving contacts by group'),
         initial_params={
             'contact': '$receiving_contact',
         },
@@ -370,6 +383,7 @@ class DeliveryForm(NetBoxModelForm):
     receiving_contact = DynamicModelChoiceField(
         queryset=Contact.objects.all(),
         required=False,
+        label=_('Receiving Contact'),
         help_text=Delivery._meta.get_field('receiving_contact').help_text,
         query_params={
             'group_id': '$contact_group',

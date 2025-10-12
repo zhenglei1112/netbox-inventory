@@ -1,7 +1,7 @@
 {% extends 'generic/object_edit.html' %}
 {% load i18n %}
 
-{% block title %}Assign {{ object.hardware_type.manufacturer }} {{ object }}{% endblock %}
+{% block title %}{% trans "Assign" %} {{ object.hardware_type.manufacturer }} {{ object }}{% endblock %}
 
 {% block tabs %}
   <ul class="nav nav-tabs px-3">

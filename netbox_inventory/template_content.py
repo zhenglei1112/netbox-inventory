@@ -14,6 +14,8 @@ from .utils import query_located
 # Assets
 #
 
+EXPIRED = _('Expired') 
+
 WARRANTY_PROGRESSBAR = """
 {% with record.warranty_progress as wp %}
 {% with record.warranty_remaining as wr %}
@@ -22,7 +24,7 @@ WARRANTY_PROGRESSBAR = """
 {% if wp is None and wr.days <= 0 %}
   <div class="progress" role="progressbar">
     <div class="progress-bar progress-bar-striped text-bg-danger" style="width:100%;">
-      Expired {{ record.warranty_end|timesince|split:','|first }} ago
+      """ + EXPIRED + """ {{ record.warranty_end|timesince|split:','|first }} 
     </div>
   </div>
 {% elif wp is None and wr.days > 0 %}
@@ -47,7 +49,7 @@ WARRANTY_PROGRESSBAR = """
     style="width: {% if wp < 0 %}0%{% else %}{{ wp }}%{% endif %};"
   ></div>
   {% if record.warranty_progress >= 100 %}
-    <span class="justify-content-center d-flex align-items-center position-absolute text-light w-100 h-100">Expired {{ record.warranty_end|timesince|split:','|first }} ago</span>
+    <span class="justify-content-center d-flex align-items-center position-absolute text-light w-100 h-100">""" + EXPIRED + """ {{ record.warranty_end|timesince|split:','|first }} </span>
   {% elif record.warranty_progress >= 35 %}
     <span class="justify-content-center d-flex align-items-center position-absolute text-body-emphasis w-100 h-100">{{ record.warranty_end|timeuntil|split:','|first }}</span>
   {% elif record.warranty_progress >= 0 %}

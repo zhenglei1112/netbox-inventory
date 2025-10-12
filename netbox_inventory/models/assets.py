@@ -31,6 +31,10 @@ class InventoryItemGroup(NestedGroupModel, NamedModel):
 
     class Meta:
         ordering = ['name']
+
+        verbose_name_plural = _('InventoryItemGroup')
+        verbose_name = _('InventoryItemGroup')
+
         constraints = (
             models.UniqueConstraint(
                 fields=('parent', 'name'), name='%(app_label)s_%(class)s_parent_name'
@@ -86,6 +90,10 @@ class InventoryItemType(NamedModel, ImageAttachmentsMixin):
 
     class Meta:
         ordering = ['manufacturer', 'model']
+
+        verbose_name_plural = _('InventoryItemType')
+        verbose_name = _('InventoryItemType')
+
         unique_together = [
             ['manufacturer', 'model'],
             ['manufacturer', 'slug'],
@@ -122,7 +130,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         verbose_name=_('name'),
     )
     asset_tag = models.CharField(
-        help_text='Identifier assigned by owner',
+        help_text=_('Identifier assigned by owner'),
         max_length=50,
         blank=True,
         null=True,
@@ -130,7 +138,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         verbose_name=_('Asset Tag'),
     )
     serial = models.CharField(
-        help_text='Identifier assigned by manufacturer',
+        help_text=_('Identifier assigned by manufacturer'),
         max_length=60,
         verbose_name=_('Serial Number'),
         blank=True,
@@ -229,7 +237,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
         verbose_name=_('Tenant'),
     )
     contact = models.ForeignKey(
-        help_text='Contact using this asset',
+        help_text=_('Contact using this asset'),
         to='tenancy.Contact',
         on_delete=models.PROTECT,
         related_name='+',
@@ -239,7 +247,7 @@ class Asset(NamedModel, ImageAttachmentsMixin):
     )
 
     storage_location = models.ForeignKey(
-        help_text='Where is this asset stored when not in use',
+        help_text=_('Where is this asset stored when not in use'),
         to='dcim.Location',
         on_delete=models.PROTECT,
         related_name='+',
@@ -584,6 +592,10 @@ class Asset(NamedModel, ImageAttachmentsMixin):
             'rack_type',
             'serial',
         )
+
+        verbose_name_plural = _('Assets')
+        verbose_name = _('Assets')
+
         constraints = (
             models.UniqueConstraint(
                 fields=('device_type', 'serial'),

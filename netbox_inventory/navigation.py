@@ -233,7 +233,7 @@ audit_admin_items = (
 if get_plugin_config('netbox_inventory', 'top_level_menu'):
     # add a top level entry
     menu = PluginMenu(
-        label=_('Inventory'),
+        label=_('Inventory Management'),
         groups=(
             (_('Asset Management'), assets_items),
             (_('Deliveries'), deliveries_items),

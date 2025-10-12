@@ -22,13 +22,18 @@ class Supplier(NamedModel, ContactsMixin):
 
     clone_fields = ['description', 'comments']
 
+    class Meta:
+        ordering = ['name']
+
+        verbose_name_plural = _('Suppliers')
+        verbose_name = _('Supplier')
 
 class Purchase(NamedModel):
     """
     Represents a purchase of a set of Assets from a Supplier.
     """
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name=_('Name'))
     supplier = models.ForeignKey(
         help_text=_('Legal entity this purchase was made at'),
         to='netbox_inventory.Supplier',
@@ -42,6 +47,7 @@ class Purchase(NamedModel):
         max_length=30,
         choices=PurchaseStatusChoices,
         help_text=_('Status of purchase'),
+        verbose_name=_('Status'),
     )
     date = models.DateField(
         help_text=_('Date when this purchase was made'),
@@ -54,6 +60,10 @@ class Purchase(NamedModel):
 
     class Meta:
         ordering = ['supplier', 'name']
+
+        verbose_name_plural = _('Purchases')
+        verbose_name = _('Purchase')
+
         unique_together = (('supplier', 'name'),)
 
     def get_status_color(self):
@@ -69,7 +79,7 @@ class Delivery(NamedModel):
     In each Delivery one or more Assets were delivered.
     """
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name=_('Name'))
     purchase = models.ForeignKey(
         help_text=_('Purchase that this delivery is part of'),
         to='netbox_inventory.Purchase',
@@ -100,8 +110,9 @@ class Delivery(NamedModel):
     class Meta:
         ordering = ['purchase', 'name']
         unique_together = (('purchase', 'name'),)
-        verbose_name = 'delivery'
-        verbose_name_plural = 'deliveries'
+        
+        verbose_name = _('delivery')
+        verbose_name_plural = _('deliveries')
 
     def __str__(self):
         return f'{self.purchase} {self.name}'

@@ -8,7 +8,7 @@
           class="nav-link {% if active_tab == 'add' %}active{% endif %}"
           href="{% url 'plugins:netbox_inventory:asset_add' %}{% querystring request %}"
       >
-          {% if object.pk %}Edit{% else %}Create{% endif %}
+          {% if object.pk %}Edit{% else %}{% trans "Create" %}{% endif %}
       </a>
   </li>
   {% if not object.pk %}
@@ -17,7 +17,7 @@
           class="nav-link {% if active_tab == 'bulk_add' %}active{% endif %}"
           href="{% url 'plugins:netbox_inventory:asset_bulk_add' %}{% querystring request %}"
       >
-          Bulk Create
+          {% trans "Bulk Create" %}
       </a>
   </li>
   {% endif %}

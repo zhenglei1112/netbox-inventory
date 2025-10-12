@@ -44,7 +44,7 @@ class AssetReassignMixin(forms.Form):
     asset_status = forms.ChoiceField(
         choices=AssetStatusChoices,
         initial=get_status_for('stored'),
-        label='Status',
+        label=_('Status'),
         help_text='Status to set to existing asset that is being unassigned',
     )
 
@@ -152,7 +152,7 @@ class AssetDeviceReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_site_id': '$storage_site',
             'storage_location_id': '$storage_location',
         },
-        label='New Asset',
+        label=_('New Asset'),
         help_text='New asset to assign to device',
     )
 
@@ -172,7 +172,7 @@ class AssetModuleReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_site_id': '$storage_site',
             'storage_location_id': '$storage_location',
         },
-        label='New Asset',
+        label=_('New Asset'),
         help_text='New asset to assign to module',
     )
 
@@ -190,7 +190,7 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
     inventoryitem_group = DynamicModelChoiceField(
         queryset=InventoryItemGroup.objects.all(),
         required=False,
-        label='Inventory Item Group',
+        label=_('Inventory Item Group'),
         help_text='Limit New Asset choices only to assets belonging to this inventory item group',
     )
     inventoryitem_type = DynamicModelChoiceField(
@@ -200,7 +200,7 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
             'manufacturer_id': '$manufacturer',
             'inventoryitem_group_id': '$inventoryitem_group',
         },
-        label='Inventory Item Type',
+        label=_('Inventory Item Type'),
         help_text='Limit New Asset choices only to assets of this inventory item type',
     )
     assigned_asset = DynamicModelChoiceField(
@@ -218,7 +218,7 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
             'inventoryitem_type_id': '$inventoryitem_type',
             'inventoryitem_group_id': '$inventoryitem_group',
         },
-        label='New Asset',
+        label=_('New Asset'),
         help_text='New asset to assign to inventory item. Set to blank to remove assignment.',
     )
 
@@ -255,7 +255,7 @@ class AssetRackReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_site_id': '$storage_site',
             'storage_location_id': '$storage_location',
         },
-        label='New Asset',
+        label=_('New Asset'),
         help_text='New asset to assign to rack',
     )
 

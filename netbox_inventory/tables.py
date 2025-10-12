@@ -121,10 +121,12 @@ class AssetTable(NetBoxTable):
     kind = tables.Column(
         accessor='get_kind_display',
         orderable=False,
+        verbose_name=_('Kind'),
     )
     manufacturer = tables.Column(
         accessor='hardware_type__manufacturer',
         linkify=True,
+        verbose_name=_('Manufacturer'),
     )
     hardware_type = tables.Column(
         linkify=True,
@@ -139,6 +141,7 @@ class AssetTable(NetBoxTable):
     hardware = tables.Column(
         linkify=True,
         order_by=('device', 'module'),
+        verbose_name=_('Hardware'),
     )
     hardware_role = tables.Column(
         accessor=columns.Accessor('hardware__role'),
@@ -209,6 +212,10 @@ class AssetTable(NetBoxTable):
     )
     comments = columns.MarkdownColumn()
     tags = columns.TagColumn()
+    
+    CREATEHARDWAREFROMASSET = _('Create hardware from asset')
+    EDITHARDWAREASSIGNMENT = _('Edit hardware assignment')
+    
     actions = columns.ActionsColumn(
         extra_buttons="""
             {% if record.hardware %}
@@ -216,11 +223,11 @@ class AssetTable(NetBoxTable):
                 <i class="mdi mdi-vector-difference-ba" aria-hidden="true"></i>
             </a>
             {% else %}
-            <a href="{% url 'plugins:netbox_inventory:asset_'|add:record.kind|add:'_create' %}?asset_id={{ record.pk }}" class="btn btn-sm btn-green" title="Create hardware from asset">
+            <a href="{% url 'plugins:netbox_inventory:asset_'|add:record.kind|add:'_create' %}?asset_id={{ record.pk }}" class="btn btn-sm btn-green" title='""" + CREATEHARDWAREFROMASSET + """'>
                 <i class="mdi mdi-vector-difference-ba"></i>
             </a>
             {% endif %}
-            <a href="{% url 'plugins:netbox_inventory:asset_assign' record.pk %}" class="btn btn-sm btn-orange" title="Edit hardware assignment">
+            <a href="{% url 'plugins:netbox_inventory:asset_assign' record.pk %}" class="btn btn-sm btn-orange" title='""" + EDITHARDWAREASSIGNMENT + """'>
                 <i class="mdi mdi-vector-link"></i>
             </a>
         """
@@ -460,7 +467,8 @@ class PurchaseTable(NetBoxTable):
     name = tables.Column(
         linkify=True,
     )
-    status = columns.ChoiceFieldColumn()
+    status = columns.ChoiceFieldColumn(verbose_name=_('Status'))
+    
     delivery_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:delivery_list',
         url_params={'purchase_id': 'pk'},
@@ -520,6 +528,7 @@ class DeliveryTable(NetBoxTable):
     )
     name = tables.Column(
         linkify=True,
+        verbose_name=_('Name'),
     )
     asset_count = columns.LinkedCountColumn(
         viewname='plugins:netbox_inventory:asset_list',
