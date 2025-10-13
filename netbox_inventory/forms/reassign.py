@@ -31,7 +31,8 @@ class AssetReassignMixin(forms.Form):
     storage_site = DynamicModelChoiceField(
         queryset=Site.objects.all(),
         required=False,
-        help_text='Limit New Asset choices only to assets stored at this site',
+        help_text=_('Limit New Asset choices only to assets stored at this site'),
+        label=_('Site'),
     )
     storage_location = DynamicModelChoiceField(
         queryset=Location.objects.all(),
@@ -39,13 +40,14 @@ class AssetReassignMixin(forms.Form):
         query_params={
             'site_id': '$storage_site',
         },
-        help_text='Limit New Asset choices only to assets stored at this location',
+        help_text=_('Limit New Asset choices only to assets stored at this location'),
+        label=_('Location'),
     )
     asset_status = forms.ChoiceField(
         choices=AssetStatusChoices,
         initial=get_status_for('stored'),
         label=_('Status'),
-        help_text='Status to set to existing asset that is being unassigned',
+        help_text=_('Status to set to existing asset that is being unassigned'),
     )
 
     fieldsets = (
@@ -153,7 +155,7 @@ class AssetDeviceReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_location_id': '$storage_location',
         },
         label=_('New Asset'),
-        help_text='New asset to assign to device',
+        help_text=_('New asset to assign to device'),
     )
 
     class Meta:
@@ -173,7 +175,7 @@ class AssetModuleReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_location_id': '$storage_location',
         },
         label=_('New Asset'),
-        help_text='New asset to assign to module',
+        help_text=_('New asset to assign to module'),
     )
 
     class Meta:
@@ -185,13 +187,14 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
     manufacturer = DynamicModelChoiceField(
         queryset=Manufacturer.objects.all(),
         required=False,
-        help_text='Limit New Asset choices only to assets by this manufacturer',
+        help_text=_('Limit New Asset choices only to assets by this manufacturer'),
+        label=_('Manufacturer'),
     )
     inventoryitem_group = DynamicModelChoiceField(
         queryset=InventoryItemGroup.objects.all(),
         required=False,
         label=_('Inventory Item Group'),
-        help_text='Limit New Asset choices only to assets belonging to this inventory item group',
+        help_text=_('Limit New Asset choices only to assets belonging to this inventory item group'),
     )
     inventoryitem_type = DynamicModelChoiceField(
         queryset=InventoryItemType.objects.all(),
@@ -201,7 +204,7 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
             'inventoryitem_group_id': '$inventoryitem_group',
         },
         label=_('Inventory Item Type'),
-        help_text='Limit New Asset choices only to assets of this inventory item type',
+        help_text=_('Limit New Asset choices only to assets of this inventory item type'),
     )
     assigned_asset = DynamicModelChoiceField(
         queryset=Asset.objects.filter(
@@ -219,7 +222,7 @@ class AssetInventoryItemReassignForm(AssetReassignMixin, NetBoxModelForm):
             'inventoryitem_group_id': '$inventoryitem_group',
         },
         label=_('New Asset'),
-        help_text='New asset to assign to inventory item. Set to blank to remove assignment.',
+        help_text=_('New asset to assign to inventory item. Set to blank to remove assignment.'),
     )
 
     fieldsets = (
@@ -256,7 +259,7 @@ class AssetRackReassignForm(AssetReassignMixin, NetBoxModelForm):
             'storage_location_id': '$storage_location',
         },
         label=_('New Asset'),
-        help_text='New asset to assign to rack',
+        help_text=_('New asset to assign to rack'),
     )
 
     class Meta:

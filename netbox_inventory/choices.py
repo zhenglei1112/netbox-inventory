@@ -21,10 +21,10 @@ class AssetStatusChoices(ChoiceSet):
 
 class HardwareKindChoices(ChoiceSet):
     CHOICES = [
-        ('device', 'Device'),
-        ('module', 'Module'),
-        ('inventoryitem', 'Inventory Item'),
-        ('rack', 'Rack'),
+        ('device', _('Device')),
+        ('module', _('Module')),
+        ('inventoryitem', _('Inventory Item')),
+        ('rack', _('Rack')),
     ]
 
 

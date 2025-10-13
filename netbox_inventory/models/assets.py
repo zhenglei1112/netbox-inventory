@@ -72,7 +72,7 @@ class InventoryItemType(NamedModel, ImageAttachmentsMixin):
     part_number = models.CharField(
         max_length=50,
         blank=True,
-        help_text='Discrete part number (optional)',
+        help_text=_('Discrete part number (optional)'),
         verbose_name=_('Part Number'),
     )
     inventoryitem_group = models.ForeignKey(

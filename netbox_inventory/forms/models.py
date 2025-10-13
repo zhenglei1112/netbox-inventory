@@ -52,7 +52,7 @@ class InventoryItemGroupForm(NetBoxModelForm):
             'parent',
             'description',
             'tags',
-            name='Inventory Item Group',
+            name=_('Inventory Item Group'),
         ),
     )
 
@@ -87,7 +87,7 @@ class InventoryItemTypeForm(NetBoxModelForm):
             'part_number',
             'inventoryitem_group',
             'tags',
-            name='Inventory Item Type',
+            name=_('Inventory Item Type'),
         ),
     )
 
@@ -213,7 +213,7 @@ class AssetForm(NetBoxModelForm):
     comments = CommentField()
 
     fieldsets = (
-        FieldSet('name', 'asset_tag', 'description', 'tags', 'status', name='General'),
+        FieldSet('name', 'asset_tag', 'description', 'tags', 'status', name=_('General')),
         FieldSet(
             'serial',
             'manufacturer',
@@ -221,7 +221,7 @@ class AssetForm(NetBoxModelForm):
             'module_type',
             'inventoryitem_type',
             'rack_type',
-            name='Hardware',
+            name=_('Hardware'),
         ),
         FieldSet(
             'owner',
@@ -229,10 +229,10 @@ class AssetForm(NetBoxModelForm):
             'delivery',
             'warranty_start',
             'warranty_end',
-            name='Purchase',
+            name=_('Purchase'),
         ),
-        FieldSet('tenant', 'contact_group', 'contact', name='Assigned to'),
-        FieldSet('storage_site', 'storage_location', name='Location'),
+        FieldSet('tenant', 'contact_group', 'contact', name=_('Assigned to')),
+        FieldSet('storage_site', 'storage_location', name=_('Location')),
     )
 
     class Meta:
@@ -331,7 +331,7 @@ class SupplierForm(NetBoxModelForm):
     slug = SlugField(slug_source='name')
     comments = CommentField()
 
-    fieldsets = (FieldSet('name', 'slug', 'description', 'tags', name='Supplier'),)
+    fieldsets = (FieldSet('name', 'slug', 'description', 'tags', name=_('Supplier')),)
 
     class Meta:
         model = Supplier
@@ -349,7 +349,7 @@ class PurchaseForm(NetBoxModelForm):
 
     fieldsets = (
         FieldSet(
-            'supplier', 'name', 'status', 'date', 'description', 'tags', name='Purchase'
+            'supplier', 'name', 'status', 'date', 'description', 'tags', name=_('Purchase')
         ),
     )
 
@@ -401,7 +401,7 @@ class DeliveryForm(NetBoxModelForm):
             'receiving_contact',
             'description',
             'tags',
-            name='Delivery',
+            name=_('Delivery'),
         ),
     )
 

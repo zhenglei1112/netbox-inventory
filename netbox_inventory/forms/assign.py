@@ -29,14 +29,14 @@ class AssetAssignMixin(forms.Form):
         queryset=Tenant.objects.all(),
         selector=True,
         required=False,
-        label='Tenant',
+        label=_('Tenant'),
         help_text=Asset._meta.get_field('tenant').help_text,
     )
     contact = DynamicModelChoiceField(
         queryset=Contact.objects.all(),
         selector=True,
         required=False,
-        label='Contact',
+        label=_('Contact'),
         help_text=Asset._meta.get_field('contact').help_text,
     )
 
@@ -90,15 +90,15 @@ class AssetDeviceAssignForm(AssetAssignMixin, NetBoxModelForm):
     site = DynamicModelChoiceField(
         queryset=Site.objects.all(),
         required=False,
-        label='Site',
+        label=_('Site'),
         initial_params={'devices': '$device'},
     )
     device = DynamicModelChoiceField(
         queryset=Device.objects.all(),
         query_params={'device_type_id': '$device_type', 'site_id': '$site'},
-        label='Device',
+        label=_('Device'),
         required=False,
-        help_text='Set to empty to unassign asset from device',
+        help_text=_('Set to empty to unassign asset from device'),
         widget=APISelect(
             api_url='/api/plugins/inventory/dcim/devices/',
             attrs={
@@ -108,9 +108,9 @@ class AssetDeviceAssignForm(AssetAssignMixin, NetBoxModelForm):
     )
 
     fieldsets = (
-        FieldSet('name', name='Asset'),
-        FieldSet('site', 'device', name='Device'),
-        FieldSet('tenant', 'contact', name='Assigned to'),
+        FieldSet('name', name=_('Asset')),
+        FieldSet('site', 'device', name=_('Device')),
+        FieldSet('tenant', 'contact', name=_('Assigned to')),
     )
 
     class Meta:
@@ -130,13 +130,14 @@ class AssetModuleAssignForm(AssetAssignMixin, NetBoxModelForm):
         queryset=Device.objects.all(),
         selector=True,
         required=False,
+        label=_('Device'),
     )
     module = DynamicModelChoiceField(
         queryset=Module.objects.all(),
         query_params={'module_type_id': '$module_type', 'device_id': '$device'},
-        label='Module',
+        label=_('Module'),
         required=False,
-        help_text='Set to empty to unassign asset from module',
+        help_text=_('Set to empty to unassign asset from module'),
         widget=APISelect(
             api_url='/api/plugins/inventory/dcim/modules/',
             attrs={
@@ -146,9 +147,9 @@ class AssetModuleAssignForm(AssetAssignMixin, NetBoxModelForm):
     )
 
     fieldsets = (
-        FieldSet('name', name='Asset'),
-        FieldSet('device', 'module', name='Module'),
-        FieldSet('tenant', 'contact', name='Tenancy'),
+        FieldSet('name', name=_('Asset')),
+        FieldSet('device', 'module', name=_('Module')),
+        FieldSet('tenant', 'contact', name=_('Tenancy')),
     )
 
     class Meta:
@@ -172,15 +173,16 @@ class AssetInventoryItemAssignForm(AssetAssignMixin, NetBoxModelForm):
         queryset=Device.objects.all(),
         selector=True,
         required=False,
+        label=_('Device'),
     )
     inventoryitem = DynamicModelChoiceField(
         queryset=InventoryItem.objects.all(),
         # we can't filter on inventoryitem_type because inventoryitem doesn't
         # have relation to inventoryitem_type
         query_params={'device_id': '$device'},
-        label='Inventory item',
+        label=_('Inventory item'),
         required=False,
-        help_text='Set to empty to unassign asset from inventory item',
+        help_text=_('Set to empty to unassign asset from inventory item'),
         widget=APISelect(
             api_url='/api/plugins/inventory/dcim/inventory-items/',
             attrs={
@@ -190,9 +192,9 @@ class AssetInventoryItemAssignForm(AssetAssignMixin, NetBoxModelForm):
     )
 
     fieldsets = (
-        FieldSet('name', name='Asset'),
-        FieldSet('device', 'inventoryitem', name='Inventory Item'),
-        FieldSet('tenant', 'contact', name='Tenancy'),
+        FieldSet('name', name=_('Asset')),
+        FieldSet('device', 'inventoryitem', name=_('Inventory Item')),
+        FieldSet('tenant', 'contact', name=_('Tenancy')),
     )
 
     class Meta:
@@ -235,12 +237,14 @@ class AssetRackAssignForm(AssetAssignMixin, NetBoxModelForm):
         queryset=Site.objects.all(),
         required=False,
         initial_params={'racks': '$rack'},
+        label=_('Site'),
     )
     location = DynamicModelChoiceField(
         queryset=Location.objects.all(),
         required=False,
         query_params={'site_id': '$site'},
         initial_params={'racks': '$rack'},
+        label=_('Location'),
     )
     rack = DynamicModelChoiceField(
         queryset=Rack.objects.all(),
@@ -249,15 +253,15 @@ class AssetRackAssignForm(AssetAssignMixin, NetBoxModelForm):
             'site_id': '$site',
             'location_id': '$location',
         },
-        label='Rack',
+        label=_('Rack'),
         required=False,
-        help_text='Set to empty to unassign asset from rack',
+        help_text=_('Set to empty to unassign asset from rack'),
     )
 
     fieldsets = (
-        FieldSet('name', name='Asset'),
-        FieldSet('site', 'location', 'rack', name='Rack'),
-        FieldSet('tenant', 'contact', name='Tenancy'),
+        FieldSet('name', name=_('Asset')),
+        FieldSet('site', 'location', 'rack', name=_('Rack')),
+        FieldSet('tenant', 'contact', name=_('Tenancy')),
     )
 
     class Meta:
