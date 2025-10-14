@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-13 10:35+0800\n"
-"PO-Revision-Date: 2025-10-13 10:39+0800\n"
+"PO-Revision-Date: 2025-10-13 13:31+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -188,7 +188,7 @@ msgstr "制造商"
 #: .\netbox_inventory\templates\netbox_inventory\asset.html:48
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:27
 msgid "Inventory Item Group"
-msgstr "库存项分组"
+msgstr "资产项分组"
 
 #: .\netbox_inventory\forms\bulk_edit.py:113
 #: .\netbox_inventory\forms\filters.py:164
@@ -296,16 +296,16 @@ msgstr "设备角色"
 #: .\netbox_inventory\forms\filters.py:185
 #: .\netbox_inventory\forms\models.py:142
 msgid "Inventory item type"
-msgstr "子部件类别"
+msgstr "资产项类别"
 
 #: .\netbox_inventory\forms\filters.py:190
 #: .\netbox_inventory\forms\models.py:77
 msgid "Inventory item group"
-msgstr "库存项分组"
+msgstr "资产项分组"
 
 #: .\netbox_inventory\forms\filters.py:195
 msgid "Inventory item role"
-msgstr "库存项角色"
+msgstr "资产项角色"
 
 #: .\netbox_inventory\forms\filters.py:208
 msgid "Rack role"
@@ -431,7 +431,7 @@ msgstr "上级"
 
 #: .\netbox_inventory\forms\models.py:62 .\netbox_inventory\navigation.py:74
 msgid "Inventory Item Groups"
-msgstr "库存项分组"
+msgstr "资产项分组"
 
 #: .\netbox_inventory\forms\models.py:90
 #: .\netbox_inventory\forms\reassign.py:206
@@ -439,7 +439,7 @@ msgstr "库存项分组"
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:83
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:24
 msgid "Inventory Item Type"
-msgstr "子部件类别"
+msgstr "资产项类别"
 
 #: .\netbox_inventory\forms\models.py:182
 msgid "Filter contacts by group"
@@ -548,7 +548,7 @@ msgstr "选择另外一项资产关联"
 #: .\netbox_inventory\models\assets.py:35
 #: .\netbox_inventory\models\assets.py:36
 msgid "InventoryItemGroup"
-msgstr "库存项分组"
+msgstr "资产项分组"
 
 #: .\netbox_inventory\models\assets.py:46
 msgid "A top-level group with this name already exists."
@@ -573,7 +573,7 @@ msgstr "零件编号"
 #: .\netbox_inventory\models\assets.py:94
 #: .\netbox_inventory\models\assets.py:95
 msgid "InventoryItemType"
-msgstr "库存项类别"
+msgstr "资产项类别"
 
 #: .\netbox_inventory\models\assets.py:125
 msgid "Can be used to quickly identify a particular asset"
@@ -834,7 +834,7 @@ msgstr "导入"
 
 #: .\netbox_inventory\navigation.py:68 .\netbox_inventory\tables.py:44
 msgid "Inventory Item Types"
-msgstr "库存项类别"
+msgstr "资产项类别"
 
 #: .\netbox_inventory\navigation.py:145 .\netbox_inventory\navigation.py:239
 #: .\netbox_inventory\tables.py:429 .\netbox_inventory\tables.py:475
@@ -1075,7 +1075,7 @@ msgstr "未分配"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:18
 msgid "Add inventory item type"
-msgstr "添加库存项类别"
+msgstr "添加资产项类别"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:53
 msgid "Asset count by status"
@@ -1104,7 +1104,7 @@ msgstr "下级组"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemgroup.html:120
 msgid "Add Group"
-msgstr "添加库存项分组"
+msgstr "添加资产项分组"
 
 #: .\netbox_inventory\templates\netbox_inventory\inventoryitemtype.html:15
 msgid "Add asset"
