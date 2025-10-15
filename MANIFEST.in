@@ -1,1 +1,2 @@
 recursive-include netbox_inventory/templates *.html
+recursive-include netbox_inventory/locale *.po *.mo
